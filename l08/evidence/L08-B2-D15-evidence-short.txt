@@ -1,0 +1,48 @@
+L08 · B2 · D15 — скорочене підтвердження
+
+Трейс: c9d29c4a0e33a7ebed01a042b9e58da8
+Профіль: lesson-08. Модель: anthropic/claude-haiku-5.5.
+Крок 6: 8 708 вхідних та 90 вихідних токенів; разом 8 798.
+
+Доказ дублювання
+У messages[1] додано повідомлення user із позначкою (context replay).
+Воно повторює результати, які вже є в історії у повідомленнях tool.
+Повний replay має 5 329 символів (це не кількість токенів).
+Нижче наведено точні уривки з JSON трейсу.
+
+У messages[1].content:
+[replayed tool result: get_account]
+{"customer": {"id": "CUS-0004", "name": "Danylo Kovalenko", "tier": "tier1"}, "accounts": [{"id": "ACC-1005", "customer_id": "CUS-0004", "currency": "EUR", "balance": 1310.2, "tier": "tier1", "holder": "Danylo Kovalenko"}]}
+
+Той самий результат у messages[3], role="tool":
+{"customer": {"id": "CUS-0004", "name": "Danylo Kovalenko", "tier": "tier1"}, "accounts": [{"id": "ACC-1005", "customer_id": "CUS-0004", "currency": "EUR", "balance": 1310.2, "tier": "tier1", "holder": "Danylo Kovalenko"}]}
+
+У messages[1].content:
+[replayed tool result: get_transactions]
+{"transactions": [{"id": "TX-0403", "account_id": "ACC-1005", "date": "2026-09-01", "amount": 35.5, "currency": "EUR", "merchant": "CityParking", "direction": "out", "transfer_type": "card", "status": "settled"}, {"id": "TX-0401", "account_id": "ACC-1005", "date": "2026-07-20", "amount": 240.0, "currency": "EUR", "merchant": "TechMart Online", "direction": "out", "transfer_type": "card", "status": "settled"}, {"id": "TX-0402", "account_id": "ACC-1005", "date": "2026-07-14", "amount": 240.0, "currency": "EUR", "merchant": "TechMart Online", "direction": "out", "transfer_type": "card", "status": "settled"}]}
+
+Той самий результат у messages[5], role="tool":
+{"transactions": [{"id": "TX-0403", "account_id": "ACC-1005", "date": "2026-09-01", "amount": 35.5, "currency": "EUR", "merchant": "CityParking", "direction": "out", "transfer_type": "card", "status": "settled"}, {"id": "TX-0401", "account_id": "ACC-1005", "date": "2026-07-20", "amount": 240.0, "currency": "EUR", "merchant": "TechMart Online", "direction": "out", "transfer_type": "card", "status": "settled"}, {"id": "TX-0402", "account_id": "ACC-1005", "date": "2026-07-14", "amount": 240.0, "currency": "EUR", "merchant": "TechMart Online", "direction": "out", "transfer_type": "card", "status": "settled"}]}
+
+Висновок
+Дані рахунку й транзакцій присутні у вході двічі: у replay та історії tool.
+Це підтверджує D15. У повному replay є й результати пошуку; тут залишено
+два короткі приклади.
+
+Перша пара прогонів — попереднє порівняння
+                             baseline       lesson-08
+Вхід першого виклику, крок 6   5 818          8 708 токенів
+Вхід за весь діалог           53 731         82 397 токенів
+Ціна діалогу за спанами       $0.004453      $0.006796
+Сума тривалостей кроків       26.798 с       29.389 с
+
+Ціна у цій парі зросла приблизно на 53%, час — на 10%.
+Це один прогін на умову, не медіана п'яти прогонів.
+Порівняння двох живих діалогів не ізолює внесок лише D15: відрізняються
+також відповіді, виклики інструментів і стан кешу.
+
+Що скорочено
+Прибрано системний промпт, перелік доступних інструментів і більшість
+реплік. Значення у наведених уривках не змінено.
+Це скорочений доказ, а не повний підсумковий звіт L08.
+Вихідні файли залишено без змін.

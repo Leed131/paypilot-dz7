@@ -1,0 +1,13 @@
+test_deadline_cancels_drip_and_closes_stream (__main__.Tests.test_deadline_cancels_drip_and_closes_stream) ... ok
+test_healthy_loop_success (__main__.Tests.test_healthy_loop_success) ... ok
+test_http_error_contract (__main__.Tests.test_http_error_contract) ... ok
+test_partial_tool_action_retained_trace_saved_session_blocked (__main__.Tests.test_partial_tool_action_retained_trace_saved_session_blocked) ... ok
+test_protocol_disconnect_one_attempt_no_charge (__main__.Tests.test_protocol_disconnect_one_attempt_no_charge) ... ok
+test_read_timeout_maps_504 (__main__.Tests.test_read_timeout_maps_504) ... ok
+test_success_usage_cache_and_single_charge (__main__.Tests.test_success_usage_cache_and_single_charge) ... ok
+test_upstream_429_unchanged_no_retry (__main__.Tests.test_upstream_429_unchanged_no_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.098s
+
+OK

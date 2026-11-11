@@ -1,0 +1,6 @@
+{
+  "repository": "sergeytkachenko/paypilot-l03-eval",
+  "commit": "7d0f5e7df63a9f3c198bc4368410a7bb61341286",
+  "overlay": "Надані власні L05-кейси та адаптований ранер, звіт L08, виправлення D14",
+  "archive_evidence": "Повні вихідні ZIP залишаються в пакеті paypilot-hw7-prepared.zip, до цього репозиторію повторно не копіюються."
+}

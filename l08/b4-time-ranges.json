@@ -1,0 +1,98 @@
+[
+  {
+    "model": "google/gemini-2.5-flash",
+    "scenario": "B1",
+    "condition": "baseline",
+    "duration_seconds_by_run": [
+      5.872,
+      2.993,
+      3.286,
+      3.07,
+      3.41
+    ]
+  },
+  {
+    "model": "google/gemini-2.5-flash",
+    "scenario": "B1",
+    "condition": "defect",
+    "duration_seconds_by_run": [
+      92.431,
+      31.778,
+      9.871,
+      89.654,
+      8.625
+    ]
+  },
+  {
+    "model": "google/gemini-2.5-flash",
+    "scenario": "B2",
+    "condition": "baseline",
+    "duration_seconds_by_run": [
+      14.595,
+      12.881,
+      13.81,
+      13.531,
+      11.697
+    ]
+  },
+  {
+    "model": "google/gemini-2.5-flash",
+    "scenario": "B2",
+    "condition": "defect",
+    "duration_seconds_by_run": [
+      14.293,
+      11.382,
+      12.384,
+      11.746,
+      12.903
+    ]
+  },
+  {
+    "model": "anthropic/claude-haiku-5.5",
+    "scenario": "B1",
+    "condition": "baseline",
+    "duration_seconds_by_run": [
+      4.992,
+      4.518,
+      4.864,
+      4.61,
+      4.845
+    ]
+  },
+  {
+    "model": "anthropic/claude-haiku-5.5",
+    "scenario": "B1",
+    "condition": "defect",
+    "duration_seconds_by_run": [
+      18.32,
+      18.663,
+      17.767,
+      19.698,
+      18.477
+    ]
+  },
+  {
+    "model": "anthropic/claude-haiku-5.5",
+    "scenario": "B2",
+    "condition": "baseline",
+    "duration_seconds_by_run": [
+      24.853,
+      24.261,
+      24.894,
+      24.844,
+      21.127
+    ]
+  },
+  {
+    "model": "anthropic/claude-haiku-5.5",
+    "scenario": "B2",
+    "condition": "defect",
+    "duration_seconds_by_run": [
+      24.194,
+      24.121,
+      26.036,
+      24.602,
+      23.4
+    ]
+  }
+]

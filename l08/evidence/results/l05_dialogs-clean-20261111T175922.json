@@ -1,0 +1,413 @@
+{
+  "prompt_version": "base.v1",
+  "set_hash": "f0d96aa10b8f",
+  "profile": "clean",
+  "judge_model": "not-used",
+  "rubric_version": "rubric.v1",
+  "elapsed": 30.9,
+  "set": "l05_dialogs",
+  "gate": "release",
+  "ran_at": "2026-11-11T17:59:53.801665+00:00",
+  "passed": 1,
+  "total": 1,
+  "skipped": 0,
+  "by_layer": {
+    "memory": {
+      "passed": 1,
+      "total": 1
+    }
+  },
+  "coverage": {
+    "cases": 1,
+    "multi_turn": 1,
+    "layers": {
+      "memory": 1
+    },
+    "oracles": {
+      "human": 1
+    },
+    "sources": {
+      "Власний діалог CONV-H01; п’ять архівних clean-прогонів від 2026-11-10.": 1
+    },
+    "severities": {
+      "medium": 1
+    },
+    "ladder_levels": [
+      2
+    ],
+    "gates": {
+      "release": 1
+    },
+    "human_oracle_pct": 100.0,
+    "severity_filled_pct": 100.0
+  },
+  "cases": [
+    {
+      "skipped": false,
+      "id": "C08-BUDGET",
+      "layer": "memory",
+      "oracle": "human",
+      "severity": "medium",
+      "gate": "release",
+      "runs": 1,
+      "verdict": {
+        "passed": true,
+        "level": 2,
+        "assertion": "budget",
+        "detail": "1/1 прогонів у межах бюджету діалогу"
+      },
+      "answers": [
+        "Yes, you still have time to file. Based on the eligibility check from earlier:\n\n- **Reason code:** `goods_not_received`\n- **Transaction date:** 2026-07-20\n- **Filing window:** 90 days from the transaction date\n- **Filing deadline:** 2026-10-18, which leaves about 33 days from today (2026-09-15)\n\nNo dispute has been opened."
+      ],
+      "latency_ms": 30843,
+      "tokens": 50278,
+      "tool_calls": [],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "I'm CUS-0004. Transaction TX-0401, 240.00 EUR: the goods never arrived. Which reason code applies? State the transaction ID and amount too. Do not open a dispute.",
+          "answer": "Your transaction TX-0401 is **EUR 240.00**, paid to **TechMart Online** on 2026-07-20 (settled, card payment, account ACC-1005).\n\nThe applicable reason code is **`goods_not_received`**. Our dispute rules set a 90-day window for this code, counted from the transaction date. Eligibility depends on that window and on the dispute being filed under the code that matches what happened, so I have not checked eligibility and have not opened a dispute.\n\nI also see a second payment of EUR 240.00 to TechMart Online on 2026-07-14 (TX-0402). If that was a duplicate charge rather than a missing delivery, a different code (`duplicate_charge`) would apply to it. I can check either transaction when you're ready to proceed.",
+          "summarized": false,
+          "tools": [
+            "get_account",
+            "search_knowledge_base",
+            "get_transactions"
+          ],
+          "tool_calls": [
+            {
+              "name": "get_account",
+              "arguments": {},
+              "result": {
+                "customer": {
+                  "id": "CUS-0004",
+                  "name": "Danylo Kovalenko",
+                  "tier": "tier1"
+                },
+                "accounts": [
+                  {
+                    "id": "ACC-1005",
+                    "customer_id": "CUS-0004",
+                    "currency": "EUR",
+                    "balance": 1310.2,
+                    "tier": "tier1",
+                    "holder": "Danylo Kovalenko"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "search_knowledge_base",
+              "arguments": {
+                "query": "dispute reason code goods not received"
+              },
+              "result": {
+                "index": "kb_clean",
+                "top_k": 4,
+                "query": "dispute reason code goods not received",
+                "fragments": [
+                  {
+                    "id": "disputes.md#s1",
+                    "doc": "disputes.md",
+                    "score": 1.206,
+                    "text": "Payment dispute rules\n## Reason codes and chargeback windows\nEach reason code has a window in days from the transaction date. A dispute opened after the window closes is not eligible.\n\n| Reason code | Window (days) |\n|---|---|\n| fraud_card_not_present | 120 |\n| goods_not_received | 90 |\n| duplicate_charge | 60 |\n| service_not_rendered | 90 |\n| unauthorized_debit | 56 |"
+                  },
+                  {
+                    "id": "reason-codes.md#s6",
+                    "doc": "reason-codes.md",
+                    "score": 1.2005,
+                    "text": "Reason code guide\n## Choosing a code\nThe reason code must match what actually happened. A dispute filed under the\nwrong code is declined and must be refiled, which may push it past its window."
+                  },
+                  {
+                    "id": "disputes-process.md#s6",
+                    "doc": "disputes-process.md",
+                    "score": 0.8839,
+                    "text": "Dispute handling process\n## Withdrawing a dispute\nA customer may withdraw a dispute at any time before resolution. Withdrawal is\nfinal; the same transaction cannot be disputed again under the same reason code."
+                  },
+                  {
+                    "id": "glossary.md#s4",
+                    "doc": "glossary.md",
+                    "score": 0.8528,
+                    "text": "Glossary\n## Reason code\nThe classification of why a transaction is disputed. The reason code determines\nthe chargeback window and the evidence required."
+                  }
+                ]
+              }
+            },
+            {
+              "name": "get_transactions",
+              "arguments": {
+                "account_id": "ACC-1005",
+                "limit": 50
+              },
+              "result": {
+                "transactions": [
+                  {
+                    "id": "TX-0403",
+                    "account_id": "ACC-1005",
+                    "date": "2026-09-01",
+                    "amount": 35.5,
+                    "currency": "EUR",
+                    "merchant": "CityParking",
+                    "direction": "out",
+                    "transfer_type": "card",
+                    "status": "settled"
+                  },
+                  {
+                    "id": "TX-0401",
+                    "account_id": "ACC-1005",
+                    "date": "2026-07-20",
+                    "amount": 240.0,
+                    "currency": "EUR",
+                    "merchant": "TechMart Online",
+                    "direction": "out",
+                    "transfer_type": "card",
+                    "status": "settled"
+                  },
+                  {
+                    "id": "TX-0402",
+                    "account_id": "ACC-1005",
+                    "date": "2026-07-14",
+                    "amount": 240.0,
+                    "currency": "EUR",
+                    "merchant": "TechMart Online",
+                    "direction": "out",
+                    "transfer_type": "card",
+                    "status": "settled"
+                  }
+                ]
+              }
+            }
+          ],
+          "fragments": [
+            {
+              "id": "disputes.md#s1",
+              "text": "Payment dispute rules\n## Reason codes and chargeback windows\nEach reason code has a window in days from the transaction date. A dispute opened after the window closes is not eligible.\n\n| Reason code | Window (days) |\n|---|---|\n| fraud_card_not_present | 120 |\n| goods_not_received | 90 |\n| duplicate_charge | 60 |\n| service_not_rendered | 90 |\n| unauthorized_debit | 56 |"
+            },
+            {
+              "id": "reason-codes.md#s6",
+              "text": "Reason code guide\n## Choosing a code\nThe reason code must match what actually happened. A dispute filed under the\nwrong code is declined and must be refiled, which may push it past its window."
+            },
+            {
+              "id": "disputes-process.md#s6",
+              "text": "Dispute handling process\n## Withdrawing a dispute\nA customer may withdraw a dispute at any time before resolution. Withdrawal is\nfinal; the same transaction cannot be disputed again under the same reason code."
+            },
+            {
+              "id": "glossary.md#s4",
+              "text": "Glossary\n## Reason code\nThe classification of why a transaction is disputed. The reason code determines\nthe chargeback window and the evidence required."
+            }
+          ],
+          "usage": {
+            "input_tokens": 9974,
+            "output_tokens": 1043,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.001129,
+            "provider_cost_usd": 0.001129
+          }
+        },
+        {
+          "turn": 2,
+          "user": "Can I dispute it? Use the official eligibility tool for that transaction and reason. State the transaction date, filing window in days, deadline, reason code and amount. Do not open a dispute.",
+          "answer": "TX-0401 is eligible for a dispute under `goods_not_received`. I have not opened it.\n\n- **Transaction ID:** TX-0401\n- **Amount:** EUR 240.00\n- **Transaction date:** 2026-07-20\n- **Filing window:** 90 days\n- **Deadline:** 2026-10-18 (as of 2026-09-15)\n- **Reason code:** `goods_not_received`\n\nIf you want to proceed, tell me and I will open the dispute for TX-0401 under this code.",
+          "summarized": false,
+          "tools": [
+            "check_dispute_eligibility"
+          ],
+          "tool_calls": [
+            {
+              "name": "check_dispute_eligibility",
+              "arguments": {
+                "transaction_id": "TX-0401",
+                "reason_code": "goods_not_received"
+              },
+              "result": {
+                "eligible": true,
+                "reason_code": "goods_not_received",
+                "window_days": 90,
+                "tx_date": "2026-07-20",
+                "as_of": "2026-09-15",
+                "deadline": "2026-10-18",
+                "checks": {
+                  "reason_code": "pass",
+                  "tx_status": "pass",
+                  "window": "pass",
+                  "compliance_hold": "pass"
+                }
+              }
+            }
+          ],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 8530,
+            "output_tokens": 414,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000607,
+            "provider_cost_usd": 0.000607
+          }
+        },
+        {
+          "turn": 3,
+          "user": "What is my daily outgoing transfer limit in EUR?",
+          "answer": "Your daily outgoing transfer limit is **EUR 5,000**. As of today (2026-09-15) you have not spent any of it, so the full EUR 5,000 is available.\n\nFor reference, your monthly limit is EUR 50,000, with EUR 35.50 used so far this month and EUR 49,964.50 remaining.",
+          "summarized": true,
+          "tools": [
+            "check_limits"
+          ],
+          "tool_calls": [
+            {
+              "name": "check_limits",
+              "arguments": {
+                "customer_id": "CUS-0004"
+              },
+              "result": {
+                "tier": "tier1",
+                "as_of": "2026-09-15",
+                "daily_limit_eur": 5000,
+                "daily_spent_eur": 0,
+                "daily_remaining_eur": 5000,
+                "monthly_limit_eur": 50000,
+                "monthly_spent_eur": 35.5,
+                "monthly_remaining_eur": 49964.5
+              }
+            }
+          ],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 6531,
+            "output_tokens": 297,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.00035,
+            "provider_cost_usd": 0.00099
+          }
+        },
+        {
+          "turn": 4,
+          "user": "According to the tariff, what is the standard FX spread percentage for my tier? Give the percentage.",
+          "answer": "The standard FX spread for Tier 1 is **1.5%**, per the Verta tariff schedule. It applies over the mid-market rate only after your free monthly conversion allowance of EUR 500 is used up.",
+          "summarized": false,
+          "tools": [
+            "search_knowledge_base"
+          ],
+          "tool_calls": [
+            {
+              "name": "search_knowledge_base",
+              "arguments": {
+                "query": "standard FX spread percentage tier1 tariff"
+              },
+              "result": {
+                "index": "kb_clean",
+                "top_k": 4,
+                "query": "standard FX spread percentage tier1 tariff",
+                "fragments": [
+                  {
+                    "id": "tariffs.md#s2",
+                    "doc": "tariffs.md",
+                    "score": 0.6934,
+                    "text": "Verta tariff schedule\n## FX spreads by tier\nThe spread is applied over the mid-market rate only after the free monthly\nconversion allowance is exhausted.\n\n| Tier | FX spread | Free monthly conversion allowance |\n|---|---|---|\n| Tier 1 | 1.5% | EUR 500 |\n| Tier 2 | 0.9% | EUR 1,000 |\n| Tier 3 | 0.5% | EUR 5,000 |"
+                  },
+                  {
+                    "id": "glossary.md#s2",
+                    "doc": "glossary.md",
+                    "score": 0.6547,
+                    "text": "Glossary\n## Spread\nThe percentage Verta adds to the mid-market rate on a conversion. The spread\ndepends on the customer tier."
+                  },
+                  {
+                    "id": "fx-guide.md#s2",
+                    "doc": "fx-guide.md",
+                    "score": 0.603,
+                    "text": "Currency conversion guide\n## Reading a quote\nA complete quote lists: mid rate, spread percentage applied, allowance total\nand allowance used before this conversion, gross converted amount, spread\namount, and the final credited amount. The final amount equals the gross\namount minus the spread amount."
+                  },
+                  {
+                    "id": "fx-guide.md#s1",
+                    "doc": "fx-guide.md",
+                    "score": 0.4851,
+                    "text": "Currency conversion guide\n## How a conversion is priced\nA conversion quote has these components, in order: the mid-market rate for the\ncurrency pair; the tier spread (a percentage of the gross converted amount);\nthe free monthly conversion allowance. If the whole conversion fits within the\ncustomer's remaining monthly allowance, no spread is charged. Once the\nallowance is exhausted, the full tier spread applies to the conversion."
+                  }
+                ]
+              }
+            }
+          ],
+          "fragments": [
+            {
+              "id": "tariffs.md#s2",
+              "text": "Verta tariff schedule\n## FX spreads by tier\nThe spread is applied over the mid-market rate only after the free monthly\nconversion allowance is exhausted.\n\n| Tier | FX spread | Free monthly conversion allowance |\n|---|---|---|\n| Tier 1 | 1.5% | EUR 500 |\n| Tier 2 | 0.9% | EUR 1,000 |\n| Tier 3 | 0.5% | EUR 5,000 |"
+            },
+            {
+              "id": "glossary.md#s2",
+              "text": "Glossary\n## Spread\nThe percentage Verta adds to the mid-market rate on a conversion. The spread\ndepends on the customer tier."
+            },
+            {
+              "id": "fx-guide.md#s2",
+              "text": "Currency conversion guide\n## Reading a quote\nA complete quote lists: mid rate, spread percentage applied, allowance total\nand allowance used before this conversion, gross converted amount, spread\namount, and the final credited amount. The final amount equals the gross\namount minus the spread amount."
+            },
+            {
+              "id": "fx-guide.md#s1",
+              "text": "Currency conversion guide\n## How a conversion is priced\nA conversion quote has these components, in order: the mid-market rate for the\ncurrency pair; the tier spread (a percentage of the gross converted amount);\nthe free monthly conversion allowance. If the whole conversion fits within the\ncustomer's remaining monthly allowance, no spread is charged. Once the\nallowance is exhausted, the full tier spread applies to the conversion."
+            }
+          ],
+          "usage": {
+            "input_tokens": 7747,
+            "output_tokens": 161,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000402,
+            "provider_cost_usd": 0.000403
+          }
+        },
+        {
+          "turn": 5,
+          "user": "Fine. Back to that charge — what do I do next? First state its exact transaction ID, amount and reason code. Do not open a dispute.",
+          "answer": "The charge we've been discussing is:\n\n- **Transaction ID:** TX-0401\n- **Amount:** EUR 240.00\n- **Merchant:** TechMart Online, 2026-07-20 (settled card payment)\n- **Reason code:** `goods_not_received`\n\nThe eligibility check for this transaction under that reason code has passed, and the filing deadline is 2026-10-18. No dispute has been opened.\n\nTo proceed, please confirm that:\n\n1. The goods from TechMart Online never arrived. The reason code must match what actually happened, because a mismatched code is declined and would have to be refiled, which could push it past the deadline.\n2. You want me to open the dispute for TX-0401 under `goods_not_received`.\n\nIf you were also charged twice for TechMart Online, TX-0402 (EUR 240.00, 2026-07-14) may be a separate matter under a `duplicate_charge` dispute. I have not checked that one, so tell me if you want me to.",
+          "summarized": false,
+          "tools": [],
+          "tool_calls": [],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 4369,
+            "output_tokens": 622,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000522,
+            "provider_cost_usd": 0.000522
+          }
+        },
+        {
+          "turn": 6,
+          "user": "240 euro, as I said at the start.",
+          "answer": "Yes, the amount is EUR 240.00. Note that TX-0402 (TechMart Online, 2026-07-14) is also EUR 240.00, so I need to be sure which charge you mean.\n\n- **TX-0401** (2026-07-20): goods not received, under `goods_not_received`. This is the charge we've been discussing.\n- **TX-0402** (2026-07-14): possibly a duplicate charge, under `duplicate_charge`. I haven't checked this one.\n\nNo dispute has been opened. To open one for TX-0401, please confirm that TechMart Online never delivered the goods and that you want me to file under `goods_not_received`. If TX-0402 is the duplicate, tell me and I'll check its eligibility first.",
+          "summarized": false,
+          "tools": [],
+          "tool_calls": [],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 4701,
+            "output_tokens": 517,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000502,
+            "provider_cost_usd": 0.000502
+          }
+        },
+        {
+          "turn": 7,
+          "user": "And I still have time to file, right? State the original transaction's reason code, transaction date, filing window in days and filing deadline. Do not open a dispute.",
+          "answer": "Yes, you still have time to file. Based on the eligibility check from earlier:\n\n- **Reason code:** `goods_not_received`\n- **Transaction date:** 2026-07-20\n- **Filing window:** 90 days from the transaction date\n- **Filing deadline:** 2026-10-18, which leaves about 33 days from today (2026-09-15)\n\nNo dispute has been opened.",
+          "summarized": false,
+          "tools": [],
+          "tool_calls": [],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 4993,
+            "output_tokens": 379,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000463,
+            "provider_cost_usd": 0.000463
+          }
+        }
+      ],
+      "budget_latency_metric": "trace_steps",
+      "budget_latency_ms_by_run": [
+        30772
+      ],
+      "runner_wall_ms_by_run": [
+        30843
+      ],
+      "traces_dir": "reports/traces/20261111T175922"
+    }
+  ]
+}

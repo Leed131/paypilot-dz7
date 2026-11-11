@@ -1,0 +1,52 @@
+{
+  "series": {
+    "clean-calibration": [
+      58333,
+      58985,
+      60386,
+      68132,
+      60302
+    ],
+    "lesson-08": [
+      85071,
+      73868,
+      70302,
+      73240,
+      72618
+    ],
+    "clean-validation": [
+      59569,
+      67190,
+      65634,
+      67497,
+      64919
+    ]
+  },
+  "medians": {
+    "clean-calibration": 60302,
+    "lesson-08": 73240,
+    "clean-validation": 65634
+  },
+  "thresholds": [
+    60000,
+    100000,
+    70000
+  ],
+  "sources": [
+    {
+      "series": "clean-calibration",
+      "archive": "C07-BUDGET-clean-release-5.zip",
+      "sha256": "8842decb3d903f2dbf52c3e4ddf83e63f3551a2d7e7ace39b563b9631d27ebe4"
+    },
+    {
+      "series": "lesson-08",
+      "archive": "C07-BUDGET-lesson08-release-5.zip",
+      "sha256": "618b509c1307811fac59517eb3e911c48f95a7ed1151bff71b82ff452cacec29"
+    },
+    {
+      "series": "clean-validation",
+      "archive": "C07-BUDGET-clean-validation-70k.zip",
+      "sha256": "9692e9c08fa3fb2a1250eb01d9c269cc0a339c9e5f4d71ccad22a0a7e3004fb9"
+    }
+  ]
+}

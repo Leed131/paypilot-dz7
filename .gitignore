@@ -1,0 +1,8 @@
+.env
+.env.*
+__pycache__/
+*.pyc
+.DS_Store
+
+paypilot-dz7-results.zip
+reports/full-profiles.lock/

@@ -1,0 +1,655 @@
+2026-11-11T16:56:16.912779092Z INFO:     192.168.65.1:51847 - "GET /health HTTP/1.1" 200 OK
+2026-11-11T16:56:16.918012092Z INFO:     192.168.65.1:43120 - "PUT /api/_test/profile HTTP/1.1" 200 OK
+2026-11-11T16:56:17.012976425Z INFO:     192.168.65.1:35660 - "GET /health HTTP/1.1" 200 OK
+2026-11-11T16:56:17.015927258Z INFO:     192.168.65.1:58008 - "GET /api/_test/defects HTTP/1.1" 200 OK
+2026-11-11T16:56:17.019313717Z INFO:     192.168.65.1:43426 - "GET /api/_test/prompt HTTP/1.1" 200 OK
+2026-11-11T16:56:17.044288842Z INFO:     192.168.65.1:46617 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T16:56:17.047475592Z INFO:     192.168.65.1:31140 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T16:56:17.050465467Z INFO:     192.168.65.1:53775 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T16:56:25.960178138Z INFO:     192.168.65.1:22340 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:01.431760083Z INFO:     192.168.65.1:43512 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:10.360862796Z INFO:     192.168.65.1:24116 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:12.844619839Z INFO:     192.168.65.1:22450 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:15.942004298Z INFO:     192.168.65.1:34318 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:18.026042049Z INFO:     192.168.65.1:42253 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:20.973262259Z INFO:     192.168.65.1:22480 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:20.976743426Z INFO:     192.168.65.1:41831 - "GET /api/_test/traces/ca141727313d40b6 HTTP/1.1" 200 OK
+2026-11-11T16:58:20.980331093Z INFO:     192.168.65.1:35154 - "GET /api/_test/traces/d857ca71da3849ac HTTP/1.1" 200 OK
+2026-11-11T16:58:20.983543884Z INFO:     192.168.65.1:21642 - "GET /api/_test/traces/45808990e0174e7b HTTP/1.1" 200 OK
+2026-11-11T16:58:20.986904134Z INFO:     192.168.65.1:22523 - "GET /api/_test/traces/59e8288e75c54bec HTTP/1.1" 200 OK
+2026-11-11T16:58:20.990148301Z INFO:     192.168.65.1:39490 - "GET /api/_test/traces/bed55b2c58424e70 HTTP/1.1" 200 OK
+2026-11-11T16:58:20.993121718Z INFO:     192.168.65.1:40070 - "GET /api/_test/traces/e4c96710a8ae4fcd HTTP/1.1" 200 OK
+2026-11-11T16:58:20.995851176Z INFO:     192.168.65.1:57162 - "GET /api/_test/traces/8a4a9e0a2a45446d HTTP/1.1" 200 OK
+2026-11-11T16:58:21.029261509Z INFO:     192.168.65.1:33259 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T16:58:21.032409718Z INFO:     192.168.65.1:49678 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T16:58:21.034786634Z INFO:     192.168.65.1:26620 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T16:58:28.496982513Z INFO:     192.168.65.1:44892 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:31.672631750Z INFO:     192.168.65.1:39457 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:37.692132670Z INFO:     192.168.65.1:55584 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:40.072607879Z INFO:     192.168.65.1:62491 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:43.039041297Z INFO:     192.168.65.1:37862 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:45.548305840Z INFO:     192.168.65.1:18798 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:49.105010758Z INFO:     192.168.65.1:19174 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:49.108314800Z INFO:     192.168.65.1:34862 - "GET /api/_test/traces/5d65ea2b5c4b493d HTTP/1.1" 200 OK
+2026-11-11T16:58:49.111489425Z INFO:     192.168.65.1:64345 - "GET /api/_test/traces/9ab19ab3ec0c455c HTTP/1.1" 200 OK
+2026-11-11T16:58:49.114551092Z INFO:     192.168.65.1:19256 - "GET /api/_test/traces/e5a192d8e9604735 HTTP/1.1" 200 OK
+2026-11-11T16:58:49.117461508Z INFO:     192.168.65.1:21141 - "GET /api/_test/traces/b2bdf0c9d1584c8f HTTP/1.1" 200 OK
+2026-11-11T16:58:49.120391008Z INFO:     192.168.65.1:44700 - "GET /api/_test/traces/fa2d24a990c44a68 HTTP/1.1" 200 OK
+2026-11-11T16:58:49.122936425Z INFO:     192.168.65.1:54234 - "GET /api/_test/traces/e494216aa6a64251 HTTP/1.1" 200 OK
+2026-11-11T16:58:49.125517425Z INFO:     192.168.65.1:64147 - "GET /api/_test/traces/a62d6dd5d9f7469b HTTP/1.1" 200 OK
+2026-11-11T16:58:49.149566050Z INFO:     192.168.65.1:34786 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T16:58:49.152292467Z INFO:     192.168.65.1:23096 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T16:58:49.154644175Z INFO:     192.168.65.1:54454 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T16:58:57.129969095Z INFO:     192.168.65.1:59719 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:58:59.837072097Z INFO:     192.168.65.1:20998 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:08.200735503Z INFO:     192.168.65.1:42870 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:10.431857546Z INFO:     192.168.65.1:47534 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:14.040466339Z INFO:     192.168.65.1:24774 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:16.594697882Z INFO:     192.168.65.1:48707 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:18.695427591Z INFO:     192.168.65.1:35669 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:18.703510175Z INFO:     192.168.65.1:51934 - "GET /api/_test/traces/5d868c4ee5e54cd8 HTTP/1.1" 200 OK
+2026-11-11T16:59:18.709839841Z INFO:     192.168.65.1:60648 - "GET /api/_test/traces/9b733c58df554d3c HTTP/1.1" 200 OK
+2026-11-11T16:59:18.715692550Z INFO:     192.168.65.1:41969 - "GET /api/_test/traces/ac4303bb172d4d4e HTTP/1.1" 200 OK
+2026-11-11T16:59:18.720115383Z INFO:     192.168.65.1:45194 - "GET /api/_test/traces/7c8e2b5e94b3491b HTTP/1.1" 200 OK
+2026-11-11T16:59:18.723740091Z INFO:     192.168.65.1:37027 - "GET /api/_test/traces/dc8c168447004392 HTTP/1.1" 200 OK
+2026-11-11T16:59:18.726820425Z INFO:     192.168.65.1:31071 - "GET /api/_test/traces/c5aa83ba4fbe427a HTTP/1.1" 200 OK
+2026-11-11T16:59:18.729859258Z INFO:     192.168.65.1:26645 - "GET /api/_test/traces/8bf6b7f8b7b94fc1 HTTP/1.1" 200 OK
+2026-11-11T16:59:18.755127758Z INFO:     192.168.65.1:36659 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T16:59:18.757685216Z INFO:     192.168.65.1:29525 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T16:59:18.760208091Z INFO:     192.168.65.1:56186 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T16:59:25.708136428Z INFO:     192.168.65.1:28569 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:28.582358513Z INFO:     192.168.65.1:34405 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:35.853985877Z INFO:     192.168.65.1:49429 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:38.137219086Z INFO:     192.168.65.1:64312 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:40.659355796Z INFO:     192.168.65.1:37090 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:43.006545089Z INFO:     192.168.65.1:45179 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:45.417590882Z INFO:     192.168.65.1:54037 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:45.424092340Z INFO:     192.168.65.1:55771 - "GET /api/_test/traces/8a9a9771106e4f85 HTTP/1.1" 200 OK
+2026-11-11T16:59:45.429403673Z INFO:     192.168.65.1:31700 - "GET /api/_test/traces/0fb5c48010a24d3b HTTP/1.1" 200 OK
+2026-11-11T16:59:45.434160840Z INFO:     192.168.65.1:34444 - "GET /api/_test/traces/6c06654340e74a64 HTTP/1.1" 200 OK
+2026-11-11T16:59:45.438276590Z INFO:     192.168.65.1:33601 - "GET /api/_test/traces/b1b7cb44b58d4840 HTTP/1.1" 200 OK
+2026-11-11T16:59:45.441791673Z INFO:     192.168.65.1:53036 - "GET /api/_test/traces/2b6d99a3721d405b HTTP/1.1" 200 OK
+2026-11-11T16:59:45.444542298Z INFO:     192.168.65.1:41210 - "GET /api/_test/traces/3c71bca81a3f46e2 HTTP/1.1" 200 OK
+2026-11-11T16:59:45.447353548Z INFO:     192.168.65.1:40370 - "GET /api/_test/traces/b10975ea8ae4493c HTTP/1.1" 200 OK
+2026-11-11T16:59:45.478331382Z INFO:     192.168.65.1:24412 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T16:59:45.481267715Z INFO:     192.168.65.1:61627 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T16:59:45.483660798Z INFO:     192.168.65.1:25227 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T16:59:52.084443676Z INFO:     192.168.65.1:61551 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T16:59:55.305634470Z INFO:     192.168.65.1:45902 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:00:02.009888917Z INFO:     192.168.65.1:52077 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:00:04.445632543Z INFO:     192.168.65.1:27293 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:00:20.343560842Z INFO:     192.168.65.1:55265 - "POST /chat HTTP/1.1" 500 Internal Server Error
+2026-11-11T17:00:20.361692217Z ERROR:    Exception in ASGI application
+2026-11-11T17:00:20.361752092Z Traceback (most recent call last):
+2026-11-11T17:00:20.361757342Z   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+2026-11-11T17:00:20.361759467Z     yield
+2026-11-11T17:00:20.361761092Z   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 127, in __iter__
+2026-11-11T17:00:20.361762717Z     for part in self._httpcore_stream:
+2026-11-11T17:00:20.361764092Z                 ^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361767967Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 407, in __iter__
+2026-11-11T17:00:20.361769634Z     raise exc from None
+2026-11-11T17:00:20.361771051Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 403, in __iter__
+2026-11-11T17:00:20.361773051Z     for part in self._stream:
+2026-11-11T17:00:20.361774467Z                 ^^^^^^^^^^^^
+2026-11-11T17:00:20.361776051Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 342, in __iter__
+2026-11-11T17:00:20.361823217Z     raise exc
+2026-11-11T17:00:20.361839217Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 334, in __iter__
+2026-11-11T17:00:20.361841509Z     for chunk in self._connection._receive_response_body(**kwargs):
+2026-11-11T17:00:20.361843176Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361845592Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 203, in _receive_response_body
+2026-11-11T17:00:20.361851176Z     event = self._receive_event(timeout=timeout)
+2026-11-11T17:00:20.361852717Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361854176Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 213, in _receive_event
+2026-11-11T17:00:20.361855676Z     with map_exceptions({h11.RemoteProtocolError: RemoteProtocolError}):
+2026-11-11T17:00:20.361857176Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361858634Z   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+2026-11-11T17:00:20.361866217Z     self.gen.throw(value)
+2026-11-11T17:00:20.361868134Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+2026-11-11T17:00:20.361870384Z     raise to_exc(exc) from exc
+2026-11-11T17:00:20.361910551Z httpcore.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)
+2026-11-11T17:00:20.361913801Z 
+2026-11-11T17:00:20.361914926Z The above exception was the direct cause of the following exception:
+2026-11-11T17:00:20.361916051Z 
+2026-11-11T17:00:20.361917176Z Traceback (most recent call last):
+2026-11-11T17:00:20.361918342Z   File "/usr/local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 422, in run_asgi
+2026-11-11T17:00:20.361921884Z     result = await app(  # type: ignore[func-returns-value]
+2026-11-11T17:00:20.361922967Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361924092Z   File "/usr/local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+2026-11-11T17:00:20.361925301Z     return await self.app(scope, receive, send)
+2026-11-11T17:00:20.361926551Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361927759Z   File "/usr/local/lib/python3.12/site-packages/fastapi/applications.py", line 1216, in __call__
+2026-11-11T17:00:20.361929759Z     await super().__call__(scope, receive, send)
+2026-11-11T17:00:20.361930926Z   File "/usr/local/lib/python3.12/site-packages/starlette/applications.py", line 96, in __call__
+2026-11-11T17:00:20.361932176Z     await self.middleware_stack(scope, receive, send)
+2026-11-11T17:00:20.361933384Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2026-11-11T17:00:20.361934759Z     raise exc
+2026-11-11T17:00:20.361936551Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2026-11-11T17:00:20.361937717Z     await self.app(scope, receive, _send)
+2026-11-11T17:00:20.361938801Z   File "/usr/local/lib/python3.12/site-packages/fastapi/telemetry/_asgi.py", line 151, in __call__
+2026-11-11T17:00:20.361939967Z     await self.app(scope, receive, send)
+2026-11-11T17:00:20.361941051Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py", line 203, in __call__
+2026-11-11T17:00:20.361942217Z     response = await self.dispatch_func(request, call_next)
+2026-11-11T17:00:20.361943342Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361944426Z   File "/stand/app/main.py", line 55, in request_settings
+2026-11-11T17:00:20.361945592Z     return await call_next(request)
+2026-11-11T17:00:20.361946676Z            ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361947717Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py", line 179, in call_next
+2026-11-11T17:00:20.361948926Z     raise app_exc from app_exc.__cause__ or app_exc.__context__
+2026-11-11T17:00:20.361950051Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py", line 149, in coro
+2026-11-11T17:00:20.361954051Z     await self.app(scope, receive_or_disconnect, send_no_error)
+2026-11-11T17:00:20.361955176Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+2026-11-11T17:00:20.361956384Z     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2026-11-11T17:00:20.361957592Z   File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2026-11-11T17:00:20.361958759Z     raise exc
+2026-11-11T17:00:20.361960009Z   File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2026-11-11T17:00:20.361961426Z     await app(scope, receive, sender)
+2026-11-11T17:00:20.361962467Z   File "/usr/local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2026-11-11T17:00:20.361963676Z     await self.app(scope, receive, send)
+2026-11-11T17:00:20.361964759Z   File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 676, in __call__
+2026-11-11T17:00:20.361965967Z     await self.middleware_stack(scope, receive, send)
+2026-11-11T17:00:20.361967051Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 2809, in app
+2026-11-11T17:00:20.361968301Z     await route.handle(scope, receive, send)
+2026-11-11T17:00:20.361969342Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 1328, in handle
+2026-11-11T17:00:20.361971176Z     await super().handle(scope, receive, send)
+2026-11-11T17:00:20.361972259Z   File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 282, in handle
+2026-11-11T17:00:20.361973426Z     await self.app(scope, receive, send)
+2026-11-11T17:00:20.361974467Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 166, in app
+2026-11-11T17:00:20.361975634Z     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2026-11-11T17:00:20.361976801Z   File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2026-11-11T17:00:20.361977967Z     raise exc
+2026-11-11T17:00:20.361978967Z   File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2026-11-11T17:00:20.361980176Z     await app(scope, receive, sender)
+2026-11-11T17:00:20.361983467Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 152, in app
+2026-11-11T17:00:20.361985801Z     response = await f(request)
+2026-11-11T17:00:20.361986842Z                ^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361987884Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 745, in app
+2026-11-11T17:00:20.361990967Z     raw_response = await run_endpoint_function(
+2026-11-11T17:00:20.361993759Z                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.361999259Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 374, in run_endpoint_function
+2026-11-11T17:00:20.362004134Z     return await run_in_threadpool(
+2026-11-11T17:00:20.362005467Z            ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362006551Z   File "/usr/local/lib/python3.12/site-packages/starlette/concurrency.py", line 34, in run_in_threadpool
+2026-11-11T17:00:20.362007801Z     return await anyio.to_thread.run_sync(func)
+2026-11-11T17:00:20.362008967Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362011009Z   File "/usr/local/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+2026-11-11T17:00:20.362015467Z     return await get_async_backend().run_sync_in_worker_thread(
+2026-11-11T17:00:20.362016551Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362017634Z   File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+2026-11-11T17:00:20.362018884Z     return await future
+2026-11-11T17:00:20.362019926Z            ^^^^^^^^^^^^
+2026-11-11T17:00:20.362021009Z   File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+2026-11-11T17:00:20.362022176Z     result = context.run(func, *args)
+2026-11-11T17:00:20.362023217Z              ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362024259Z   File "/usr/local/lib/python3.12/site-packages/fastapi/telemetry/_api.py", line 244, in _run_sync_endpoint
+2026-11-11T17:00:20.362025509Z     return function(**arguments)
+2026-11-11T17:00:20.362026551Z            ^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362027592Z   File "/stand/app/main.py", line 139, in chat
+2026-11-11T17:00:20.362028717Z     return loop.run_turn(body.session_id, body.message, customer)
+2026-11-11T17:00:20.362029842Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362030967Z   File "/stand/app/agent/loop.py", line 79, in run_turn
+2026-11-11T17:00:20.362032092Z     return _run_turn(sid, state, user_message)
+2026-11-11T17:00:20.362033134Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362034176Z   File "/stand/app/agent/loop.py", line 129, in _run_turn
+2026-11-11T17:00:20.362035301Z     resp = _complete(provider, system, state, s)
+2026-11-11T17:00:20.362036342Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362037467Z   File "/stand/app/agent/loop.py", line 186, in _complete
+2026-11-11T17:00:20.362038551Z     resp = provider.complete(stamped, messages, specs)
+2026-11-11T17:00:20.362039634Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362040676Z   File "/stand/app/agent/providers/base.py", line 40, in complete
+2026-11-11T17:00:20.362041801Z     resp = self._inner.complete(system, messages, tools)
+2026-11-11T17:00:20.362045051Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362046176Z   File "/stand/app/agent/providers/openai_provider.py", line 89, in complete
+2026-11-11T17:00:20.362047301Z     resp = httpx.post(self.api_url, json=payload, timeout=self.timeout,
+2026-11-11T17:00:20.362048426Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362049634Z   File "/usr/local/lib/python3.12/site-packages/httpx/_api.py", line 304, in post
+2026-11-11T17:00:20.362050801Z     return request(
+2026-11-11T17:00:20.362051801Z            ^^^^^^^^
+2026-11-11T17:00:20.362052801Z   File "/usr/local/lib/python3.12/site-packages/httpx/_api.py", line 109, in request
+2026-11-11T17:00:20.362053967Z     return client.request(
+2026-11-11T17:00:20.362055051Z            ^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362056051Z   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+2026-11-11T17:00:20.362057759Z     return self.send(request, auth=auth, follow_redirects=follow_redirects)
+2026-11-11T17:00:20.362058884Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362060051Z   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 928, in send
+2026-11-11T17:00:20.362061217Z     raise exc
+2026-11-11T17:00:20.362062217Z   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 922, in send
+2026-11-11T17:00:20.362063342Z     response.read()
+2026-11-11T17:00:20.362064342Z   File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 881, in read
+2026-11-11T17:00:20.362065467Z     self._content = b"".join(self.iter_bytes())
+2026-11-11T17:00:20.362066592Z                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362091842Z   File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 897, in iter_bytes
+2026-11-11T17:00:20.362094217Z     for raw_bytes in self.iter_raw():
+2026-11-11T17:00:20.362095301Z                      ^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362096384Z   File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 951, in iter_raw
+2026-11-11T17:00:20.362097509Z     for raw_stream_bytes in self.stream:
+2026-11-11T17:00:20.362098551Z                             ^^^^^^^^^^^
+2026-11-11T17:00:20.362099676Z   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 153, in __iter__
+2026-11-11T17:00:20.362100842Z     for chunk in self._stream:
+2026-11-11T17:00:20.362104176Z                  ^^^^^^^^^^^^
+2026-11-11T17:00:20.362106467Z   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 126, in __iter__
+2026-11-11T17:00:20.362107634Z     with map_httpcore_exceptions():
+2026-11-11T17:00:20.362108717Z          ^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:00:20.362112551Z   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+2026-11-11T17:00:20.362113717Z     self.gen.throw(value)
+2026-11-11T17:00:20.362114759Z   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+2026-11-11T17:00:20.362116009Z     raise mapped_exc(message) from exc
+2026-11-11T17:00:20.362117092Z httpx.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)
+2026-11-11T17:00:20.385108426Z INFO:     192.168.65.1:55940 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:00:20.388804051Z INFO:     192.168.65.1:17316 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:00:20.391939592Z INFO:     192.168.65.1:24913 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:00:27.511959221Z INFO:     192.168.65.1:34516 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:06.351739083Z INFO:     192.168.65.1:40048 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:12.187190502Z INFO:     192.168.65.1:60183 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:14.545131629Z INFO:     192.168.65.1:52790 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:17.892476297Z INFO:     192.168.65.1:61758 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:17.896707005Z INFO:     192.168.65.1:47817 - "GET /api/_test/traces/d4ea7d0ec0d8475e HTTP/1.1" 200 OK
+2026-11-11T17:12:17.900672505Z INFO:     192.168.65.1:29339 - "GET /api/_test/traces/650a2df49fec415a HTTP/1.1" 200 OK
+2026-11-11T17:12:17.904671214Z INFO:     192.168.65.1:37345 - "GET /api/_test/traces/7b148eeb26e44d85 HTTP/1.1" 200 OK
+2026-11-11T17:12:17.908274089Z INFO:     192.168.65.1:21823 - "GET /api/_test/traces/cf2b16e9646e45db HTTP/1.1" 200 OK
+2026-11-11T17:12:17.911130047Z INFO:     192.168.65.1:44831 - "GET /api/_test/traces/a4114557760d44dc HTTP/1.1" 200 OK
+2026-11-11T17:12:17.941077214Z INFO:     192.168.65.1:53427 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:12:17.943969505Z INFO:     192.168.65.1:57262 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:12:17.946662880Z INFO:     192.168.65.1:43455 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:12:25.454212217Z INFO:     192.168.65.1:56113 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:28.622140010Z INFO:     192.168.65.1:39288 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:38.620500584Z INFO:     192.168.65.1:54120 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:44.077227378Z INFO:     192.168.65.1:32801 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:48.800122839Z INFO:     192.168.65.1:43506 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:48.808087506Z INFO:     192.168.65.1:48475 - "GET /api/_test/traces/2b310d25e6d645ee HTTP/1.1" 200 OK
+2026-11-11T17:12:48.813850339Z INFO:     192.168.65.1:39683 - "GET /api/_test/traces/5cc48f059af94451 HTTP/1.1" 200 OK
+2026-11-11T17:12:48.820350589Z INFO:     192.168.65.1:52023 - "GET /api/_test/traces/c9a3ddac1d374bf4 HTTP/1.1" 200 OK
+2026-11-11T17:12:48.826228881Z INFO:     192.168.65.1:22369 - "GET /api/_test/traces/95e2a13052604554 HTTP/1.1" 200 OK
+2026-11-11T17:12:48.830395131Z INFO:     192.168.65.1:18080 - "GET /api/_test/traces/d47b2297a2774cfa HTTP/1.1" 200 OK
+2026-11-11T17:12:48.858420922Z INFO:     192.168.65.1:18079 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:12:48.861693256Z INFO:     192.168.65.1:61355 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:12:48.864326089Z INFO:     192.168.65.1:22452 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:12:55.589471300Z INFO:     192.168.65.1:34974 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:12:59.168718844Z INFO:     192.168.65.1:60547 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:07.167127875Z INFO:     192.168.65.1:62463 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:10.043313751Z INFO:     192.168.65.1:23569 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:12.401444378Z INFO:     192.168.65.1:18552 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:12.404557503Z INFO:     192.168.65.1:23184 - "GET /api/_test/traces/0076863bf1254c96 HTTP/1.1" 200 OK
+2026-11-11T17:13:12.407718336Z INFO:     192.168.65.1:37040 - "GET /api/_test/traces/0674f8c57e0d41a9 HTTP/1.1" 200 OK
+2026-11-11T17:13:12.410882544Z INFO:     192.168.65.1:23103 - "GET /api/_test/traces/36711eded5e14869 HTTP/1.1" 200 OK
+2026-11-11T17:13:12.413948961Z INFO:     192.168.65.1:16007 - "GET /api/_test/traces/38ba57005ca445d2 HTTP/1.1" 200 OK
+2026-11-11T17:13:12.416718961Z INFO:     192.168.65.1:38422 - "GET /api/_test/traces/d0fdedb00c0c417f HTTP/1.1" 200 OK
+2026-11-11T17:13:12.441472836Z INFO:     192.168.65.1:61598 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:13:12.443951086Z INFO:     192.168.65.1:21287 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:13:12.446176544Z INFO:     192.168.65.1:22702 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:13:20.202703506Z INFO:     192.168.65.1:22554 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:23.480854424Z INFO:     192.168.65.1:53898 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:30.439919344Z INFO:     192.168.65.1:17762 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:32.381367720Z INFO:     192.168.65.1:59238 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:34.315833971Z INFO:     192.168.65.1:50244 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:34.320343388Z INFO:     192.168.65.1:27435 - "GET /api/_test/traces/cf564717b21c47f0 HTTP/1.1" 200 OK
+2026-11-11T17:13:34.324084013Z INFO:     192.168.65.1:24338 - "GET /api/_test/traces/0054c6e331734ef7 HTTP/1.1" 200 OK
+2026-11-11T17:13:34.327142013Z INFO:     192.168.65.1:32749 - "GET /api/_test/traces/493bedafdd804bad HTTP/1.1" 200 OK
+2026-11-11T17:13:34.329833846Z INFO:     192.168.65.1:56349 - "GET /api/_test/traces/d2f568280ef44b22 HTTP/1.1" 200 OK
+2026-11-11T17:13:34.332438180Z INFO:     192.168.65.1:59506 - "GET /api/_test/traces/55aa1ef92ed54266 HTTP/1.1" 200 OK
+2026-11-11T17:13:34.356502388Z INFO:     192.168.65.1:62657 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:13:34.359210471Z INFO:     192.168.65.1:18332 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:13:34.361601888Z INFO:     192.168.65.1:57108 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:13:41.174928877Z INFO:     192.168.65.1:55672 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:44.196702253Z INFO:     192.168.65.1:60570 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:51.349044882Z INFO:     192.168.65.1:63059 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:13:54.808645508Z INFO:     192.168.65.1:44763 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:00.185976094Z INFO:     192.168.65.1:54744 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:00.193595844Z INFO:     192.168.65.1:30063 - "GET /api/_test/traces/537bf97383954494 HTTP/1.1" 200 OK
+2026-11-11T17:14:00.199764553Z INFO:     192.168.65.1:45203 - "GET /api/_test/traces/f5a3cdea17464f7d HTTP/1.1" 200 OK
+2026-11-11T17:14:00.205261886Z INFO:     192.168.65.1:32814 - "GET /api/_test/traces/e9c4ffbcf4ce43b8 HTTP/1.1" 200 OK
+2026-11-11T17:14:00.209927803Z INFO:     192.168.65.1:63039 - "GET /api/_test/traces/4004e38937784fe0 HTTP/1.1" 200 OK
+2026-11-11T17:14:00.213420428Z INFO:     192.168.65.1:59944 - "GET /api/_test/traces/ab27378f213d4ffd HTTP/1.1" 200 OK
+2026-11-11T17:14:00.240120594Z INFO:     192.168.65.1:38734 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:14:00.242714678Z INFO:     192.168.65.1:29009 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:14:00.245026844Z INFO:     192.168.65.1:18670 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:14:06.471215500Z INFO:     192.168.65.1:20950 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:09.330033376Z INFO:     192.168.65.1:33098 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:15.535304212Z INFO:     192.168.65.1:24252 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:18.033376130Z INFO:     192.168.65.1:45314 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:21.524329632Z INFO:     192.168.65.1:36304 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:24.857468508Z INFO:     192.168.65.1:24490 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:28.070826468Z INFO:     192.168.65.1:19220 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:30.637260095Z INFO:     192.168.65.1:40082 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:32.891137596Z INFO:     192.168.65.1:19847 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:35.441286180Z INFO:     192.168.65.1:52594 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:35.448277972Z INFO:     192.168.65.1:54750 - "GET /api/_test/traces/5bbc75c8888d429f HTTP/1.1" 200 OK
+2026-11-11T17:14:35.454024430Z INFO:     192.168.65.1:46475 - "GET /api/_test/traces/b3134852d1d0488e HTTP/1.1" 200 OK
+2026-11-11T17:14:35.459787555Z INFO:     192.168.65.1:44776 - "GET /api/_test/traces/f574cdfe5c9c4a2e HTTP/1.1" 200 OK
+2026-11-11T17:14:35.465096389Z INFO:     192.168.65.1:31058 - "GET /api/_test/traces/382479f30424485b HTTP/1.1" 200 OK
+2026-11-11T17:14:35.469751014Z INFO:     192.168.65.1:57493 - "GET /api/_test/traces/fd002a4e0cb14393 HTTP/1.1" 200 OK
+2026-11-11T17:14:35.473539680Z INFO:     192.168.65.1:16268 - "GET /api/_test/traces/df5793fb90e64c81 HTTP/1.1" 200 OK
+2026-11-11T17:14:35.477352514Z INFO:     192.168.65.1:49316 - "GET /api/_test/traces/a3c09c78fc294fa9 HTTP/1.1" 200 OK
+2026-11-11T17:14:35.480453305Z INFO:     192.168.65.1:49567 - "GET /api/_test/traces/a41600028bc34727 HTTP/1.1" 200 OK
+2026-11-11T17:14:35.483183847Z INFO:     192.168.65.1:65070 - "GET /api/_test/traces/0db4d54094a24b4d HTTP/1.1" 200 OK
+2026-11-11T17:14:35.486313764Z INFO:     192.168.65.1:28982 - "GET /api/_test/traces/832cb1a0519b49c1 HTTP/1.1" 200 OK
+2026-11-11T17:14:35.514632722Z INFO:     192.168.65.1:62432 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:14:35.517294055Z INFO:     192.168.65.1:57329 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:14:35.519611930Z INFO:     192.168.65.1:24104 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:14:41.661185002Z INFO:     192.168.65.1:56268 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:14:44.742127837Z INFO:     192.168.65.1:33693 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:15:00.502738595Z INFO:     192.168.65.1:44351 - "POST /chat HTTP/1.1" 500 Internal Server Error
+2026-11-11T17:15:00.507431470Z ERROR:    Exception in ASGI application
+2026-11-11T17:15:00.507449553Z Traceback (most recent call last):
+2026-11-11T17:15:00.507451595Z   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+2026-11-11T17:15:00.507452928Z     yield
+2026-11-11T17:15:00.507453970Z   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 127, in __iter__
+2026-11-11T17:15:00.507455220Z     for part in self._httpcore_stream:
+2026-11-11T17:15:00.507456261Z                 ^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507457303Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 407, in __iter__
+2026-11-11T17:15:00.507458428Z     raise exc from None
+2026-11-11T17:15:00.507459470Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 403, in __iter__
+2026-11-11T17:15:00.507460553Z     for part in self._stream:
+2026-11-11T17:15:00.507461553Z                 ^^^^^^^^^^^^
+2026-11-11T17:15:00.507462553Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 342, in __iter__
+2026-11-11T17:15:00.507463678Z     raise exc
+2026-11-11T17:15:00.507464678Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 334, in __iter__
+2026-11-11T17:15:00.507610053Z     for chunk in self._connection._receive_response_body(**kwargs):
+2026-11-11T17:15:00.507613511Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507614678Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 203, in _receive_response_body
+2026-11-11T17:15:00.507615845Z     event = self._receive_event(timeout=timeout)
+2026-11-11T17:15:00.507616886Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507617886Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 213, in _receive_event
+2026-11-11T17:15:00.507619095Z     with map_exceptions({h11.RemoteProtocolError: RemoteProtocolError}):
+2026-11-11T17:15:00.507620845Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507621886Z   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+2026-11-11T17:15:00.507622970Z     self.gen.throw(value)
+2026-11-11T17:15:00.507623970Z   File "/usr/local/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+2026-11-11T17:15:00.507625095Z     raise to_exc(exc) from exc
+2026-11-11T17:15:00.507626095Z httpcore.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)
+2026-11-11T17:15:00.507627595Z 
+2026-11-11T17:15:00.507628553Z The above exception was the direct cause of the following exception:
+2026-11-11T17:15:00.507629970Z 
+2026-11-11T17:15:00.507631261Z Traceback (most recent call last):
+2026-11-11T17:15:00.507632261Z   File "/usr/local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 422, in run_asgi
+2026-11-11T17:15:00.507634303Z     result = await app(  # type: ignore[func-returns-value]
+2026-11-11T17:15:00.507635345Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507636386Z   File "/usr/local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+2026-11-11T17:15:00.507637511Z     return await self.app(scope, receive, send)
+2026-11-11T17:15:00.507641428Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507642386Z   File "/usr/local/lib/python3.12/site-packages/fastapi/applications.py", line 1216, in __call__
+2026-11-11T17:15:00.507643511Z     await super().__call__(scope, receive, send)
+2026-11-11T17:15:00.507644511Z   File "/usr/local/lib/python3.12/site-packages/starlette/applications.py", line 96, in __call__
+2026-11-11T17:15:00.507645636Z     await self.middleware_stack(scope, receive, send)
+2026-11-11T17:15:00.507646678Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+2026-11-11T17:15:00.507647761Z     raise exc
+2026-11-11T17:15:00.507648720Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+2026-11-11T17:15:00.507652428Z     await self.app(scope, receive, _send)
+2026-11-11T17:15:00.507653511Z   File "/usr/local/lib/python3.12/site-packages/fastapi/telemetry/_asgi.py", line 151, in __call__
+2026-11-11T17:15:00.507654595Z     await self.app(scope, receive, send)
+2026-11-11T17:15:00.507655595Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py", line 203, in __call__
+2026-11-11T17:15:00.507661261Z     response = await self.dispatch_func(request, call_next)
+2026-11-11T17:15:00.507662303Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507663345Z   File "/stand/app/main.py", line 55, in request_settings
+2026-11-11T17:15:00.507664386Z     return await call_next(request)
+2026-11-11T17:15:00.507665386Z            ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507666386Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py", line 179, in call_next
+2026-11-11T17:15:00.507667511Z     raise app_exc from app_exc.__cause__ or app_exc.__context__
+2026-11-11T17:15:00.507668553Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/base.py", line 149, in coro
+2026-11-11T17:15:00.507669678Z     await self.app(scope, receive_or_disconnect, send_no_error)
+2026-11-11T17:15:00.507670678Z   File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+2026-11-11T17:15:00.507671928Z     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+2026-11-11T17:15:00.507673011Z   File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2026-11-11T17:15:00.507674095Z     raise exc
+2026-11-11T17:15:00.507675345Z   File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2026-11-11T17:15:00.507676470Z     await app(scope, receive, sender)
+2026-11-11T17:15:00.507677428Z   File "/usr/local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+2026-11-11T17:15:00.507678595Z     await self.app(scope, receive, send)
+2026-11-11T17:15:00.507679553Z   File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 676, in __call__
+2026-11-11T17:15:00.507680720Z     await self.middleware_stack(scope, receive, send)
+2026-11-11T17:15:00.507681803Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 2809, in app
+2026-11-11T17:15:00.507682886Z     await route.handle(scope, receive, send)
+2026-11-11T17:15:00.507683886Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 1328, in handle
+2026-11-11T17:15:00.507685011Z     await super().handle(scope, receive, send)
+2026-11-11T17:15:00.507686511Z   File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 282, in handle
+2026-11-11T17:15:00.507687595Z     await self.app(scope, receive, send)
+2026-11-11T17:15:00.507688595Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 166, in app
+2026-11-11T17:15:00.507691220Z     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+2026-11-11T17:15:00.507692303Z   File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+2026-11-11T17:15:00.507693428Z     raise exc
+2026-11-11T17:15:00.507694386Z   File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+2026-11-11T17:15:00.507695511Z     await app(scope, receive, sender)
+2026-11-11T17:15:00.507696511Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 152, in app
+2026-11-11T17:15:00.507697595Z     response = await f(request)
+2026-11-11T17:15:00.507698553Z                ^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507699553Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 745, in app
+2026-11-11T17:15:00.507700595Z     raw_response = await run_endpoint_function(
+2026-11-11T17:15:00.507701595Z                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507702636Z   File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 374, in run_endpoint_function
+2026-11-11T17:15:00.507703761Z     return await run_in_threadpool(
+2026-11-11T17:15:00.507704761Z            ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507705720Z   File "/usr/local/lib/python3.12/site-packages/starlette/concurrency.py", line 34, in run_in_threadpool
+2026-11-11T17:15:00.507706886Z     return await anyio.to_thread.run_sync(func)
+2026-11-11T17:15:00.507707845Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507708845Z   File "/usr/local/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+2026-11-11T17:15:00.507710303Z     return await get_async_backend().run_sync_in_worker_thread(
+2026-11-11T17:15:00.507711303Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507712386Z   File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+2026-11-11T17:15:00.507713553Z     return await future
+2026-11-11T17:15:00.507714511Z            ^^^^^^^^^^^^
+2026-11-11T17:15:00.507715511Z   File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+2026-11-11T17:15:00.507716595Z     result = context.run(func, *args)
+2026-11-11T17:15:00.507717595Z              ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507718553Z   File "/usr/local/lib/python3.12/site-packages/fastapi/telemetry/_api.py", line 244, in _run_sync_endpoint
+2026-11-11T17:15:00.507719720Z     return function(**arguments)
+2026-11-11T17:15:00.507720720Z            ^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507721720Z   File "/stand/app/main.py", line 139, in chat
+2026-11-11T17:15:00.507722761Z     return loop.run_turn(body.session_id, body.message, customer)
+2026-11-11T17:15:00.507725303Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507730136Z   File "/stand/app/agent/loop.py", line 79, in run_turn
+2026-11-11T17:15:00.507731845Z     return _run_turn(sid, state, user_message)
+2026-11-11T17:15:00.507732886Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507733845Z   File "/stand/app/agent/loop.py", line 104, in _run_turn
+2026-11-11T17:15:00.507734928Z     summary, transcript, summary_resp = summarize.summarize_call(
+2026-11-11T17:15:00.507736053Z                                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507737220Z   File "/stand/app/agent/summarize.py", line 92, in summarize_call
+2026-11-11T17:15:00.507738303Z     resp = provider.complete(
+2026-11-11T17:15:00.507739636Z            ^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507740928Z   File "/stand/app/agent/providers/base.py", line 40, in complete
+2026-11-11T17:15:00.507742011Z     resp = self._inner.complete(system, messages, tools)
+2026-11-11T17:15:00.507743053Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507744053Z   File "/stand/app/agent/providers/openai_provider.py", line 89, in complete
+2026-11-11T17:15:00.507745136Z     resp = httpx.post(self.api_url, json=payload, timeout=self.timeout,
+2026-11-11T17:15:00.507746470Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507747636Z   File "/usr/local/lib/python3.12/site-packages/httpx/_api.py", line 304, in post
+2026-11-11T17:15:00.507748886Z     return request(
+2026-11-11T17:15:00.507749845Z            ^^^^^^^^
+2026-11-11T17:15:00.507750803Z   File "/usr/local/lib/python3.12/site-packages/httpx/_api.py", line 109, in request
+2026-11-11T17:15:00.507751886Z     return client.request(
+2026-11-11T17:15:00.507752845Z            ^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507753803Z   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+2026-11-11T17:15:00.507755136Z     return self.send(request, auth=auth, follow_redirects=follow_redirects)
+2026-11-11T17:15:00.507756220Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507757303Z   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 928, in send
+2026-11-11T17:15:00.507758386Z     raise exc
+2026-11-11T17:15:00.507759303Z   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 922, in send
+2026-11-11T17:15:00.507760386Z     response.read()
+2026-11-11T17:15:00.507761345Z   File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 881, in read
+2026-11-11T17:15:00.507762428Z     self._content = b"".join(self.iter_bytes())
+2026-11-11T17:15:00.507763470Z                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507782970Z   File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 897, in iter_bytes
+2026-11-11T17:15:00.507784720Z     for raw_bytes in self.iter_raw():
+2026-11-11T17:15:00.507785720Z                      ^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507786720Z   File "/usr/local/lib/python3.12/site-packages/httpx/_models.py", line 951, in iter_raw
+2026-11-11T17:15:00.507787803Z     for raw_stream_bytes in self.stream:
+2026-11-11T17:15:00.507788803Z                             ^^^^^^^^^^^
+2026-11-11T17:15:00.507789886Z   File "/usr/local/lib/python3.12/site-packages/httpx/_client.py", line 153, in __iter__
+2026-11-11T17:15:00.507790970Z     for chunk in self._stream:
+2026-11-11T17:15:00.507791928Z                  ^^^^^^^^^^^^
+2026-11-11T17:15:00.507792928Z   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 126, in __iter__
+2026-11-11T17:15:00.507795803Z     with map_httpcore_exceptions():
+2026-11-11T17:15:00.507796886Z          ^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-11T17:15:00.507797886Z   File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+2026-11-11T17:15:00.507798970Z     self.gen.throw(value)
+2026-11-11T17:15:00.507799928Z   File "/usr/local/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+2026-11-11T17:15:00.507801095Z     raise mapped_exc(message) from exc
+2026-11-11T17:15:00.507802095Z httpx.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)
+2026-11-11T17:15:00.528185428Z INFO:     192.168.65.1:18584 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:15:00.531988053Z INFO:     192.168.65.1:49598 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:15:00.535205178Z INFO:     192.168.65.1:34812 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:30:18.693273167Z INFO:     192.168.65.1:61324 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:22.021073585Z INFO:     192.168.65.1:46394 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:24.424767878Z INFO:     192.168.65.1:56753 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:26.747071338Z INFO:     192.168.65.1:46152 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:29.300352381Z INFO:     192.168.65.1:46414 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:31.196117257Z INFO:     192.168.65.1:32077 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:33.096114841Z INFO:     192.168.65.1:21701 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:33.104826674Z INFO:     192.168.65.1:57095 - "GET /api/_test/traces/9dbaec64b1ea4ec9 HTTP/1.1" 200 OK
+2026-11-11T17:30:33.111084507Z INFO:     192.168.65.1:49528 - "GET /api/_test/traces/f3b565d3d1dc468b HTTP/1.1" 200 OK
+2026-11-11T17:30:33.116647341Z INFO:     192.168.65.1:23349 - "GET /api/_test/traces/a363f233b9344be0 HTTP/1.1" 200 OK
+2026-11-11T17:30:33.122480966Z INFO:     192.168.65.1:16402 - "GET /api/_test/traces/804902d21663491c HTTP/1.1" 200 OK
+2026-11-11T17:30:33.127758007Z INFO:     192.168.65.1:21663 - "GET /api/_test/traces/aec5f367b6c44442 HTTP/1.1" 200 OK
+2026-11-11T17:30:33.131693216Z INFO:     192.168.65.1:56624 - "GET /api/_test/traces/d91d902a11de4040 HTTP/1.1" 200 OK
+2026-11-11T17:30:33.134930216Z INFO:     192.168.65.1:59065 - "GET /api/_test/traces/bb6be4b72b6343b4 HTTP/1.1" 200 OK
+2026-11-11T17:30:33.161468716Z INFO:     192.168.65.1:56112 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:30:33.163965799Z INFO:     192.168.65.1:36184 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:30:33.166295341Z INFO:     192.168.65.1:64584 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:30:41.540397845Z INFO:     192.168.65.1:34594 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:44.688061596Z INFO:     192.168.65.1:21906 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:47.237930542Z INFO:     192.168.65.1:39198 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:49.552690959Z INFO:     192.168.65.1:58449 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:52.193975794Z INFO:     192.168.65.1:48265 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:54.305555878Z INFO:     192.168.65.1:35534 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:56.140262879Z INFO:     192.168.65.1:41991 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:30:56.146002671Z INFO:     192.168.65.1:41816 - "GET /api/_test/traces/68f249fc3ed44988 HTTP/1.1" 200 OK
+2026-11-11T17:30:56.150777212Z INFO:     192.168.65.1:62888 - "GET /api/_test/traces/9965591bef0642e8 HTTP/1.1" 200 OK
+2026-11-11T17:30:56.154171546Z INFO:     192.168.65.1:65392 - "GET /api/_test/traces/09b4f94f9059433f HTTP/1.1" 200 OK
+2026-11-11T17:30:56.157909671Z INFO:     192.168.65.1:26097 - "GET /api/_test/traces/aeb7ff047957453e HTTP/1.1" 200 OK
+2026-11-11T17:30:56.161332087Z INFO:     192.168.65.1:28472 - "GET /api/_test/traces/bfc9c30d32fd44d2 HTTP/1.1" 200 OK
+2026-11-11T17:30:56.164125337Z INFO:     192.168.65.1:40968 - "GET /api/_test/traces/ef61d620e13142c0 HTTP/1.1" 200 OK
+2026-11-11T17:30:56.166868462Z INFO:     192.168.65.1:33558 - "GET /api/_test/traces/882717fbf7f94713 HTTP/1.1" 200 OK
+2026-11-11T17:30:56.190304379Z INFO:     192.168.65.1:24826 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:30:56.192935879Z INFO:     192.168.65.1:20964 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:30:56.195378046Z INFO:     192.168.65.1:39708 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:31:02.407666257Z INFO:     192.168.65.1:33893 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:05.332487258Z INFO:     192.168.65.1:61626 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:07.512928468Z INFO:     192.168.65.1:40812 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:10.128078677Z INFO:     192.168.65.1:24367 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:12.417835595Z INFO:     192.168.65.1:49842 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:13.963055846Z INFO:     192.168.65.1:48311 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:15.764959888Z INFO:     192.168.65.1:23656 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:15.768898888Z INFO:     192.168.65.1:43937 - "GET /api/_test/traces/adf4a331c52643f6 HTTP/1.1" 200 OK
+2026-11-11T17:31:15.772327847Z INFO:     192.168.65.1:38474 - "GET /api/_test/traces/60af84e45dc84a05 HTTP/1.1" 200 OK
+2026-11-11T17:31:15.775395763Z INFO:     192.168.65.1:60436 - "GET /api/_test/traces/661cc87a43b14ec0 HTTP/1.1" 200 OK
+2026-11-11T17:31:15.778809513Z INFO:     192.168.65.1:25238 - "GET /api/_test/traces/616877a92b614ad0 HTTP/1.1" 200 OK
+2026-11-11T17:31:15.781989222Z INFO:     192.168.65.1:24439 - "GET /api/_test/traces/00b88cfd41234d88 HTTP/1.1" 200 OK
+2026-11-11T17:31:15.784687680Z INFO:     192.168.65.1:45433 - "GET /api/_test/traces/cdc45456b40c4eb0 HTTP/1.1" 200 OK
+2026-11-11T17:31:15.787593472Z INFO:     192.168.65.1:27650 - "GET /api/_test/traces/aaf44af06dd64263 HTTP/1.1" 200 OK
+2026-11-11T17:31:15.822243805Z INFO:     192.168.65.1:51447 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:31:15.824831555Z INFO:     192.168.65.1:57631 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:31:15.827214513Z INFO:     192.168.65.1:28226 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:31:22.251356627Z INFO:     192.168.65.1:41940 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:26.152610379Z INFO:     192.168.65.1:50921 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:28.509793714Z INFO:     192.168.65.1:42543 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:30.809228256Z INFO:     192.168.65.1:24146 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:33.973024966Z INFO:     192.168.65.1:57821 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:41.442161428Z INFO:     192.168.65.1:31865 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:43.048036554Z INFO:     192.168.65.1:65346 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:43.057036554Z INFO:     192.168.65.1:56338 - "GET /api/_test/traces/abdef47c7c394328 HTTP/1.1" 200 OK
+2026-11-11T17:31:43.063274637Z INFO:     192.168.65.1:35223 - "GET /api/_test/traces/72905787885e400c HTTP/1.1" 200 OK
+2026-11-11T17:31:43.069505887Z INFO:     192.168.65.1:35837 - "GET /api/_test/traces/f3689e34fcf54d96 HTTP/1.1" 200 OK
+2026-11-11T17:31:43.074485595Z INFO:     192.168.65.1:43263 - "GET /api/_test/traces/753e91af89254869 HTTP/1.1" 200 OK
+2026-11-11T17:31:43.079547179Z INFO:     192.168.65.1:59710 - "GET /api/_test/traces/5127a1894b0443dd HTTP/1.1" 200 OK
+2026-11-11T17:31:43.083784637Z INFO:     192.168.65.1:52517 - "GET /api/_test/traces/54ca500df6c64704 HTTP/1.1" 200 OK
+2026-11-11T17:31:43.087891679Z INFO:     192.168.65.1:43997 - "GET /api/_test/traces/83b7534ba770437e HTTP/1.1" 200 OK
+2026-11-11T17:31:43.119440221Z INFO:     192.168.65.1:49152 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:31:43.122110054Z INFO:     192.168.65.1:44695 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:31:43.124506012Z INFO:     192.168.65.1:28233 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:31:50.043267710Z INFO:     192.168.65.1:57546 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:53.488496794Z INFO:     192.168.65.1:55271 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:56.107460421Z INFO:     192.168.65.1:41517 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:31:58.644504755Z INFO:     192.168.65.1:58879 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:00.551198881Z INFO:     192.168.65.1:17350 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:02.988348216Z INFO:     192.168.65.1:50112 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:04.969436300Z INFO:     192.168.65.1:28059 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:04.974763758Z INFO:     192.168.65.1:32277 - "GET /api/_test/traces/9f27568635d44953 HTTP/1.1" 200 OK
+2026-11-11T17:32:04.978799550Z INFO:     192.168.65.1:49951 - "GET /api/_test/traces/c5d57e206a104c92 HTTP/1.1" 200 OK
+2026-11-11T17:32:04.981931217Z INFO:     192.168.65.1:24469 - "GET /api/_test/traces/ec24ce3e0f0b4d95 HTTP/1.1" 200 OK
+2026-11-11T17:32:04.984917217Z INFO:     192.168.65.1:23696 - "GET /api/_test/traces/c0454962b1b9434f HTTP/1.1" 200 OK
+2026-11-11T17:32:04.987900842Z INFO:     192.168.65.1:50126 - "GET /api/_test/traces/233484c153704932 HTTP/1.1" 200 OK
+2026-11-11T17:32:04.990674675Z INFO:     192.168.65.1:53761 - "GET /api/_test/traces/390c28afbd634455 HTTP/1.1" 200 OK
+2026-11-11T17:32:04.993516092Z INFO:     192.168.65.1:51376 - "GET /api/_test/traces/68817336165b45f7 HTTP/1.1" 200 OK
+2026-11-11T17:32:05.018333800Z INFO:     192.168.65.1:32476 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:32:05.021131300Z INFO:     192.168.65.1:62035 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:32:05.023288675Z INFO:     192.168.65.1:20555 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:32:07.247604301Z INFO:     192.168.65.1:31611 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:08.439594010Z INFO:     192.168.65.1:27008 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:15.484621722Z INFO:     192.168.65.1:57046 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:17.606472958Z INFO:     192.168.65.1:33368 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:18.766832792Z INFO:     192.168.65.1:59264 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:20.110958168Z INFO:     192.168.65.1:54842 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:21.337004377Z INFO:     192.168.65.1:47405 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:21.340483460Z INFO:     192.168.65.1:31786 - "GET /api/_test/traces/6e408e13ee5e48ea HTTP/1.1" 200 OK
+2026-11-11T17:32:21.343510335Z INFO:     192.168.65.1:49061 - "GET /api/_test/traces/08fb659028bb47ed HTTP/1.1" 200 OK
+2026-11-11T17:32:21.346481335Z INFO:     192.168.65.1:48045 - "GET /api/_test/traces/b9b7f731fdab48d4 HTTP/1.1" 200 OK
+2026-11-11T17:32:21.349833377Z INFO:     192.168.65.1:21831 - "GET /api/_test/traces/36fb867b79cd4c08 HTTP/1.1" 200 OK
+2026-11-11T17:32:21.352998335Z INFO:     192.168.65.1:54291 - "GET /api/_test/traces/1f03f566ff6244d5 HTTP/1.1" 200 OK
+2026-11-11T17:32:21.355734002Z INFO:     192.168.65.1:29951 - "GET /api/_test/traces/9b2df911a59d4ccf HTTP/1.1" 200 OK
+2026-11-11T17:32:21.358310043Z INFO:     192.168.65.1:61574 - "GET /api/_test/traces/ac3238906efb46aa HTTP/1.1" 200 OK
+2026-11-11T17:32:21.384359377Z INFO:     192.168.65.1:36702 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:32:21.387265002Z INFO:     192.168.65.1:58724 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:32:21.389632127Z INFO:     192.168.65.1:51039 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:32:24.050236378Z INFO:     192.168.65.1:34753 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:25.627820337Z INFO:     192.168.65.1:43965 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:37.786527051Z INFO:     192.168.65.1:54853 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:40.114432844Z INFO:     192.168.65.1:21456 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:41.460637470Z INFO:     192.168.65.1:36603 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:42.570355554Z INFO:     192.168.65.1:16296 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:43.662944596Z INFO:     192.168.65.1:27252 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:43.670945846Z INFO:     192.168.65.1:53487 - "GET /api/_test/traces/166a85f6fdbd4dea HTTP/1.1" 200 OK
+2026-11-11T17:32:43.677687512Z INFO:     192.168.65.1:46091 - "GET /api/_test/traces/7ab93cca6241420c HTTP/1.1" 200 OK
+2026-11-11T17:32:43.682553679Z INFO:     192.168.65.1:52718 - "GET /api/_test/traces/f1def67b7f5644d6 HTTP/1.1" 200 OK
+2026-11-11T17:32:43.687825804Z INFO:     192.168.65.1:40760 - "GET /api/_test/traces/938a49da2455421a HTTP/1.1" 200 OK
+2026-11-11T17:32:43.691784762Z INFO:     192.168.65.1:59164 - "GET /api/_test/traces/31161ae084a440a6 HTTP/1.1" 200 OK
+2026-11-11T17:32:43.694861846Z INFO:     192.168.65.1:33247 - "GET /api/_test/traces/68ff8d52a61d465a HTTP/1.1" 200 OK
+2026-11-11T17:32:43.697775637Z INFO:     192.168.65.1:25846 - "GET /api/_test/traces/9620673843c84348 HTTP/1.1" 200 OK
+2026-11-11T17:32:43.724131137Z INFO:     192.168.65.1:51931 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:32:43.726901721Z INFO:     192.168.65.1:32038 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:32:43.729430762Z INFO:     192.168.65.1:18754 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:32:45.602538888Z INFO:     192.168.65.1:55886 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:46.536775625Z INFO:     192.168.65.1:17058 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:53.107662169Z INFO:     192.168.65.1:46216 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:55.646358171Z INFO:     192.168.65.1:63226 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:56.889056754Z INFO:     192.168.65.1:46922 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:32:59.147792297Z INFO:     192.168.65.1:40314 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:00.430410006Z INFO:     192.168.65.1:23234 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:00.433452381Z INFO:     192.168.65.1:50562 - "GET /api/_test/traces/60acabc5bbe14f7f HTTP/1.1" 200 OK
+2026-11-11T17:33:00.436327423Z INFO:     192.168.65.1:28899 - "GET /api/_test/traces/004b7b0a0322418a HTTP/1.1" 200 OK
+2026-11-11T17:33:00.439632589Z INFO:     192.168.65.1:24332 - "GET /api/_test/traces/2a77787b62ba4874 HTTP/1.1" 200 OK
+2026-11-11T17:33:00.443090881Z INFO:     192.168.65.1:38237 - "GET /api/_test/traces/3c3267df61ac4ae5 HTTP/1.1" 200 OK
+2026-11-11T17:33:00.446560673Z INFO:     192.168.65.1:18903 - "GET /api/_test/traces/871d65b37098442f HTTP/1.1" 200 OK
+2026-11-11T17:33:00.449345839Z INFO:     192.168.65.1:17526 - "GET /api/_test/traces/2bc38cbd5cab4d4d HTTP/1.1" 200 OK
+2026-11-11T17:33:00.451884339Z INFO:     192.168.65.1:31152 - "GET /api/_test/traces/b5e5658920684c04 HTTP/1.1" 200 OK
+2026-11-11T17:33:00.488276423Z INFO:     192.168.65.1:24744 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:33:00.491016089Z INFO:     192.168.65.1:55553 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:33:00.493388506Z INFO:     192.168.65.1:62454 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:33:02.751395049Z INFO:     192.168.65.1:31539 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:03.573021549Z INFO:     192.168.65.1:29241 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:10.258330344Z INFO:     192.168.65.1:48942 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:12.437752470Z INFO:     192.168.65.1:33823 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:13.668371179Z INFO:     192.168.65.1:45514 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:15.870866472Z INFO:     192.168.65.1:57767 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:17.049171333Z INFO:     192.168.65.1:33005 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:17.053177916Z INFO:     192.168.65.1:27113 - "GET /api/_test/traces/7cc9e1ebf5484ef2 HTTP/1.1" 200 OK
+2026-11-11T17:33:17.056130375Z INFO:     192.168.65.1:17512 - "GET /api/_test/traces/d48eb4d703094087 HTTP/1.1" 200 OK
+2026-11-11T17:33:17.059240583Z INFO:     192.168.65.1:47863 - "GET /api/_test/traces/6036209c942b4b45 HTTP/1.1" 200 OK
+2026-11-11T17:33:17.062376291Z INFO:     192.168.65.1:55037 - "GET /api/_test/traces/7f2a7fed6e4f474a HTTP/1.1" 200 OK
+2026-11-11T17:33:17.065413583Z INFO:     192.168.65.1:58907 - "GET /api/_test/traces/8464c3701918436f HTTP/1.1" 200 OK
+2026-11-11T17:33:17.067879958Z INFO:     192.168.65.1:44055 - "GET /api/_test/traces/9c2929dd209e4685 HTTP/1.1" 200 OK
+2026-11-11T17:33:17.070603791Z INFO:     192.168.65.1:59994 - "GET /api/_test/traces/aa7c9d09bdf840f0 HTTP/1.1" 200 OK
+2026-11-11T17:33:17.111218541Z INFO:     192.168.65.1:31775 - "POST /api/_test/reset HTTP/1.1" 200 OK
+2026-11-11T17:33:17.114456083Z INFO:     192.168.65.1:20560 - "POST /api/_test/clock HTTP/1.1" 200 OK
+2026-11-11T17:33:17.117109000Z INFO:     192.168.65.1:54772 - "PUT /api/_test/summarize_after HTTP/1.1" 200 OK
+2026-11-11T17:33:19.955723001Z INFO:     192.168.65.1:48621 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:20.850655335Z INFO:     192.168.65.1:44126 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:28.905583297Z INFO:     192.168.65.1:31463 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:31.076065423Z INFO:     192.168.65.1:17712 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:32.956455216Z INFO:     192.168.65.1:17686 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:34.716940133Z INFO:     192.168.65.1:45901 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:36.229715509Z INFO:     192.168.65.1:45752 - "POST /chat HTTP/1.1" 200 OK
+2026-11-11T17:33:36.233322259Z INFO:     192.168.65.1:17879 - "GET /api/_test/traces/7ba7c1b4e6214640 HTTP/1.1" 200 OK
+2026-11-11T17:33:36.236109759Z INFO:     192.168.65.1:16110 - "GET /api/_test/traces/a868d927eb054230 HTTP/1.1" 200 OK
+2026-11-11T17:33:36.238982759Z INFO:     192.168.65.1:37637 - "GET /api/_test/traces/b0dcde9dc7f642ba HTTP/1.1" 200 OK
+2026-11-11T17:33:36.242107426Z INFO:     192.168.65.1:31748 - "GET /api/_test/traces/14b7b0487e194992 HTTP/1.1" 200 OK
+2026-11-11T17:33:36.245136717Z INFO:     192.168.65.1:41342 - "GET /api/_test/traces/cac7c7745c024324 HTTP/1.1" 200 OK
+2026-11-11T17:33:36.247738676Z INFO:     192.168.65.1:43283 - "GET /api/_test/traces/abf6ccabc82c4f58 HTTP/1.1" 200 OK
+2026-11-11T17:33:36.250287717Z INFO:     192.168.65.1:43134 - "GET /api/_test/traces/d07fe9f4b7f54abd HTTP/1.1" 200 OK

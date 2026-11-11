@@ -1,2 +1,67 @@
-# paypilot-dz7
-L08 Observability &amp; Cost Report: PayPilot, budgets, traces and model comparison. Validation in progress.
+# ДЗ_7: підготовлена копія PayPilot
+
+Статус: підготовлено на базі чистого офіційного кіта L03 (коміт 7d0f5e7), накладено власні кейси й адаптований ранер. Chain-ready ще не підтверджено. Стенд окремий і не входить до репозиторію. Попередні репозиторії ДЗ не змінено. Джерело: l08/source-version.json.
+
+## L08 · Observability & Cost Report
+
+Заповнений звіт: l08/observability-cost-report.md. Точна порожня форма: l08/observability-cost-report.template.md. B4: l08/b4.json. Калібрування: l08/calibration.json і останній блок звіту.
+
+### Запуск
+
+Команди нижче платні. Виконувати з кореня окремої копії на Mac, із запущеним stand. Не запускати паралельно. `--repeat 1` не додається: runs у кейсах збережено. lesson-08 може дати очікувані FAIL, але прогін має завершитися і записати звіт.
+
+```bash
+STAND_DIR="../paypilot-stand-l08" EVAL_STAND_URL="http://host.docker.internal:8000" docker compose run --rm -T eval --set l05_dialogs --gate all --profile lesson-08 --traces
+```
+
+Після завершення повернути стенд і отримати звіт clean навіть за наявності очікуваних FAIL попереднього запуску:
+
+```bash
+STAND_DIR="../paypilot-stand-l08" EVAL_STAND_URL="http://host.docker.internal:8000" docker compose run --rm -T eval --set l05_dialogs --gate all --profile clean --traces
+```
+
+Шлях STAND_DIR передбачає сусідню папку stand. За іншим розташуванням вказати її фактичний шлях. Не запускати з архівного каталогу випадково.
+
+### Бюджетні кейси (sets/l05_dialogs.jsonl)
+
+| id | Що ловить | identical_tool_calls_max | tokens_total | latency_ms | gate / runs |
+|---|---|---|---|---|---|
+| C07-BUDGET | Ресурси багатокрокового діалогу / D15 | — | 70000 | 35000 | release / 5 |
+| C08-BUDGET | Ресурси багатокрокового діалогу / D15 | — | 62000 | 36000 | release / 5 |
+| C09-BUDGET | Ресурси багатокрокового діалогу / D15 | — | 36000 | 28000 | release / 5 |
+| C10-BUDGET | Ресурси багатокрокового діалогу / D15 | — | 105000 | 55000 | release / 5 |
+| C11-BUDGET | Ресурси багатокрокового діалогу / D15 | — | 76000 | 31000 | release / 5 |
+| C12-BUDGET | Ресурси багатокрокового діалогу / D15 | — | 47000 | 23000 | release / 5 |
+| C13-D14-BUDGET | D14, однакові аргументи в одному кроці | 1 | — | — | daily / 1 |
+
+### Прогони
+
+| Що | Профіль / модель | Звіт |
+|---|---|---|
+| C07, історична калібрувальна серія | clean / Haiku | reports/l05_dialogs-clean-20261110T181629.json |
+| C07, історична дефектна серія | lesson-08 / Haiku | reports/l05_dialogs-lesson-08-20261110T182145.json |
+| C07, незалежний clean | clean / Haiku | reports/l05_dialogs-clean-20261110T183514.json |
+| B4, 40 діалогів | Haiku + Gemini | l08/b4.json |
+| Новий повний набір 12 кейсів | lesson-08 / clean | Ще не виконано |
+
+Старі звіти мають інші set_hash і не підтверджують новий набір. Історичні 1/5 бюджетів, контрольний C08 1/1, регресія 4/6 залишаються у l08/evidence/results/. Повного зеленого набору не заявлено.
+
+### Офлайн-перевірка без моделі
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 cli.py --set l05_dialogs --dry-run
+```
+
+Для повного --gate all очікується 56 діалогів на профіль: 11 release ×5 і один daily ×1. Разом два профілі: 112, якщо всі спроби завершаться. Це не 12 платних діалогів. Фактичні витрати наперед не гарантовані.
+
+
+### Повний запуск на Mac одним блоком
+
+```bash
+bash scripts/run_full_profiles.sh --run
+```
+
+Скрипт перевіряє стенд без платного запиту, фіксує Haiku у заголовку X-Stand-Settings, виконує lesson-08 і clean послідовно, зберігає окремі журнали та exit-коди. Автоматичних повторів немає. Після завершення або переривання пробує повернути clean. Каталог reports/full-profiles.lock захищає від випадкового повторного платного запуску. Не видаляти його без перевірки збережених результатів.
+
+Для обміну результатами: scripts/pack_results.py створює paypilot-dz7-results.zip зі звітами та трейсами. Цей скрипт не запускає модель.

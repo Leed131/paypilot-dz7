@@ -1,0 +1,438 @@
+{
+  "prompt_version": "base.v1",
+  "set_hash": "c05d27a7c789",
+  "profile": "clean",
+  "judge_model": "not-used",
+  "rubric_version": "rubric.v1",
+  "elapsed": 146.1,
+  "set": "l05_dialogs",
+  "gate": "release",
+  "ran_at": "2026-11-10T18:18:55.718908+00:00",
+  "passed": 0,
+  "total": 1,
+  "skipped": 0,
+  "by_layer": {
+    "memory": {
+      "passed": 0,
+      "total": 1
+    }
+  },
+  "coverage": {
+    "cases": 1,
+    "multi_turn": 1,
+    "layers": {
+      "memory": 1
+    },
+    "oracles": {
+      "human": 1
+    },
+    "sources": {
+      "Калібрування B2: 5 baseline-прогонів 2026-11-09, anthropic/claude-haiku-5.5; кіт 666e496.": 1
+    },
+    "severities": {
+      "medium": 1
+    },
+    "ladder_levels": [
+      2
+    ],
+    "gates": {
+      "release": 1
+    },
+    "human_oracle_pct": 100.0,
+    "severity_filled_pct": 100.0
+  },
+  "cases": [
+    {
+      "skipped": false,
+      "id": "C07-BUDGET",
+      "layer": "memory",
+      "oracle": "human",
+      "severity": "medium",
+      "gate": "release",
+      "runs": 5,
+      "verdict": {
+        "passed": false,
+        "level": 2,
+        "assertion": "budget",
+        "detail": "1/5 прогонів перевищили бюджет; прогін 4: tokens 68132 > 68000"
+      },
+      "answers": [
+        "The dispute is already open, so I haven't opened another one. Dispute ID 1 for TX-0401 (240.00 EUR, TechMart Online, 2026-07-20, duplicate charge) was filed earlier in this conversation and has status open. Opening a second one would duplicate it.\n\nI can't look up its current status with my tools. Dispute updates are sent as notifications when the status changes. If you need more than that, I can ",
+        "The dispute is open.\n\n- **Dispute ID:** 1\n- **Transaction:** TX-0401, EUR 240.00, TechMart Online, 2026-07-20\n- **Reason:** duplicate_charge\n- **Status:** open\n\nNext steps:\n- The case may ask you for evidence, such as order confirmations or merchant correspondence. If requested, you have 7 calendar days to respond, or the case is declined.\n- You can withdraw the dispute while it is open or under r",
+        "The dispute is open.\n\n- **Dispute ID:** 1\n- **Transaction:** TX-0401, 240.00 EUR, TechMart Online, 20 July 2026\n- **Reason:** duplicate_charge\n- **Status:** open\n\nNext steps:\n- Keep your order confirmations or receipts for both TechMart payments (14 July and 20 July). If evidence is requested and not provided within 7 calendar days, the case is declined.\n- If you want the card blocked while this i",
+        "The dispute is open.\n\n- **Dispute ID:** 1\n- **Transaction:** TX-0401, TechMart Online, EUR 240.00, 20 July 2026\n- **Reason:** Duplicate charge (matches TX-0402, EUR 240.00, 14 July 2026)\n- **Status:** Open\n\nVerta may ask you for supporting evidence, such as order confirmations or receipts from TechMart. If you don't provide requested evidence within 7 calendar days, the case will be declined. Gath",
+        "The dispute is open.\n\n- **Dispute ID:** 1\n- **Transaction:** TX-0401, TechMart Online, 2026-07-20\n- **Amount:** EUR 240.00\n- **Reason:** duplicate_charge\n- **Status:** Open\n\nNext steps:\n1. Gather your order confirmations or receipts for both TechMart Online payments, plus your statement showing both charges.\n2. If the dispute team asks for evidence, you have 7 calendar days to provide it, or the c"
+      ],
+      "latency_ms": 31575,
+      "tokens": 306138,
+      "tool_calls": [
+        {
+          "name": "create_dispute",
+          "arguments": {
+            "transaction_id": "TX-0401",
+            "reason_code": "duplicate_charge",
+            "amount": 240,
+            "currency": "EUR"
+          },
+          "result": {
+            "dispute_id": 1,
+            "status": "open"
+          }
+        }
+      ],
+      "transcript": [
+        {
+          "turn": 1,
+          "user": "Hi, I see two charges of 240 EUR from TechMart Online on my account. Can you check my recent transactions?",
+          "answer": "I found both TechMart Online charges on your EUR account (ACC-1005):\n\n| Transaction ID | Date | Merchant | Amount | Status |\n|---|---|---|---|---|\n| TX-0402 | 2026-07-14 | TechMart Online | EUR 240.00 (out) | Settled |\n| TX-0401 | 2026-07-20 | TechMart Online | EUR 240.00 (out) | Settled |\n\nBoth are card payments and both have settled. Your current balance is EUR 1,310.20.\n\nIf you didn't expect the second charge, I can open a duplicate-charge dispute for TX-0401. I'd first check whether it's eligible, and I'd only open it once you confirm. Would you like me to proceed?",
+          "summarized": false,
+          "tools": [
+            "get_account",
+            "get_transactions"
+          ],
+          "tool_calls": [
+            {
+              "name": "get_account",
+              "arguments": {},
+              "result": {
+                "customer": {
+                  "id": "CUS-0004",
+                  "name": "Danylo Kovalenko",
+                  "tier": "tier1"
+                },
+                "accounts": [
+                  {
+                    "id": "ACC-1005",
+                    "customer_id": "CUS-0004",
+                    "currency": "EUR",
+                    "balance": 1310.2,
+                    "tier": "tier1",
+                    "holder": "Danylo Kovalenko"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "get_transactions",
+              "arguments": {
+                "account_id": "ACC-1005",
+                "limit": 20
+              },
+              "result": {
+                "transactions": [
+                  {
+                    "id": "TX-0403",
+                    "account_id": "ACC-1005",
+                    "date": "2026-09-01",
+                    "amount": 35.5,
+                    "currency": "EUR",
+                    "merchant": "CityParking",
+                    "direction": "out",
+                    "transfer_type": "card",
+                    "status": "settled"
+                  },
+                  {
+                    "id": "TX-0401",
+                    "account_id": "ACC-1005",
+                    "date": "2026-07-20",
+                    "amount": 240.0,
+                    "currency": "EUR",
+                    "merchant": "TechMart Online",
+                    "direction": "out",
+                    "transfer_type": "card",
+                    "status": "settled"
+                  },
+                  {
+                    "id": "TX-0402",
+                    "account_id": "ACC-1005",
+                    "date": "2026-07-14",
+                    "amount": 240.0,
+                    "currency": "EUR",
+                    "merchant": "TechMart Online",
+                    "direction": "out",
+                    "transfer_type": "card",
+                    "status": "settled"
+                  }
+                ]
+              }
+            }
+          ],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 8552,
+            "output_tokens": 536,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000444,
+            "provider_cost_usd": 0.000444
+          }
+        },
+        {
+          "turn": 2,
+          "user": "Yes, the one on July 20 looks like a duplicate of the one on July 14. What dispute reason fits and how long do I have to file?",
+          "answer": "The July 20 charge (TX-0401) is eligible for a dispute.\n\n- **Reason code:** `duplicate_charge`, which fits because TX-0401 is the same EUR 240.00 charge to TechMart Online as TX-0402 on July 14.\n- **Filing window:** 60 days from the transaction date. The deadline for TX-0401 is **2026-09-18**, three days from today (2026-09-15).\n\nEligibility checks passed: reason code, transaction status, window, and account status.\n\nShould I open the dispute for TX-0401 now for EUR 240.00? This is irreversible, so I'll wait for your go-ahead.",
+          "summarized": false,
+          "tools": [
+            "check_dispute_eligibility"
+          ],
+          "tool_calls": [
+            {
+              "name": "check_dispute_eligibility",
+              "arguments": {
+                "transaction_id": "TX-0401",
+                "reason_code": "duplicate_charge"
+              },
+              "result": {
+                "eligible": true,
+                "reason_code": "duplicate_charge",
+                "window_days": 60,
+                "tx_date": "2026-07-20",
+                "as_of": "2026-09-15",
+                "deadline": "2026-09-18",
+                "checks": {
+                  "reason_code": "pass",
+                  "tx_status": "pass",
+                  "window": "pass",
+                  "compliance_hold": "pass"
+                }
+              }
+            }
+          ],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 7088,
+            "output_tokens": 723,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000617,
+            "provider_cost_usd": 0.000618
+          }
+        },
+        {
+          "turn": 3,
+          "user": "What documents do I need for that?",
+          "answer": "The knowledge base doesn't list documents specific to duplicate charges. It says that for disputes in general you may be asked for:\n\n- An order confirmation\n- A delivery record\n- Correspondence with the merchant\n\nIf you're asked for evidence and don't supply it within 7 calendar days, the case is declined. For a duplicate charge, the most useful items would probably be the order confirmations or receipts for both TechMart Online payments (July 14 and July 20), so it's clear they cover the same purchase. Your bank statement showing both charges is also useful.\n\nTiming: the dispute must be filed by 2026-09-18. Once it's open, you'll have 7 days to send any evidence requested.\n\nI haven't opened the dispute. Do you want me to file the duplicate-charge dispute for TX-0401 (EUR 240.00) now?",
+          "summarized": false,
+          "tools": [
+            "search_knowledge_base"
+          ],
+          "tool_calls": [
+            {
+              "name": "search_knowledge_base",
+              "arguments": {
+                "query": "duplicate charge dispute required documents evidence"
+              },
+              "result": {
+                "index": "kb_clean",
+                "top_k": 4,
+                "query": "duplicate charge dispute required documents evidence",
+                "fragments": [
+                  {
+                    "id": "disputes-process.md#s5",
+                    "doc": "disputes-process.md",
+                    "score": 0.6489,
+                    "text": "Dispute handling process\n## Evidence requirements\nThe customer may be asked for supporting evidence: an order confirmation, a\ndelivery record, correspondence with the merchant. Failure to supply requested\nevidence within 7 calendar days results in the case being declined."
+                  },
+                  {
+                    "id": "disputes-process.md#s6",
+                    "doc": "disputes-process.md",
+                    "score": 0.5303,
+                    "text": "Dispute handling process\n## Withdrawing a dispute\nA customer may withdraw a dispute at any time before resolution. Withdrawal is\nfinal; the same transaction cannot be disputed again under the same reason code."
+                  },
+                  {
+                    "id": "glossary.md#s7",
+                    "doc": "glossary.md",
+                    "score": 0.4714,
+                    "text": "Glossary\n## Provisional credit\nA temporary refund applied while a dispute is reviewed; reversed if the dispute\nis declined."
+                  },
+                  {
+                    "id": "disputes-process.md#s1",
+                    "doc": "disputes-process.md",
+                    "score": 0.4286,
+                    "text": "Dispute handling process\n## Raising a dispute\nA dispute is raised against a single settled transaction. The customer supplies\nthe transaction reference and a reason code. The agent verifies eligibility\nbefore the case is opened; an ineligible request is refused with the failing\ncondition named, except where confidentiality rules apply."
+                  }
+                ]
+              }
+            }
+          ],
+          "fragments": [
+            {
+              "id": "disputes-process.md#s5",
+              "text": "Dispute handling process\n## Evidence requirements\nThe customer may be asked for supporting evidence: an order confirmation, a\ndelivery record, correspondence with the merchant. Failure to supply requested\nevidence within 7 calendar days results in the case being declined."
+            },
+            {
+              "id": "disputes-process.md#s6",
+              "text": "Dispute handling process\n## Withdrawing a dispute\nA customer may withdraw a dispute at any time before resolution. Withdrawal is\nfinal; the same transaction cannot be disputed again under the same reason code."
+            },
+            {
+              "id": "glossary.md#s7",
+              "text": "Glossary\n## Provisional credit\nA temporary refund applied while a dispute is reviewed; reversed if the dispute\nis declined."
+            },
+            {
+              "id": "disputes-process.md#s1",
+              "text": "Dispute handling process\n## Raising a dispute\nA dispute is raised against a single settled transaction. The customer supplies\nthe transaction reference and a reason code. The agent verifies eligibility\nbefore the case is opened; an ineligible request is refused with the failing\ncondition named, except where confidentiality rules apply."
+            }
+          ],
+          "usage": {
+            "input_tokens": 8365,
+            "output_tokens": 519,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000643,
+            "provider_cost_usd": 0.000643
+          }
+        },
+        {
+          "turn": 4,
+          "user": "Is my card still safe to use meanwhile?",
+          "answer": "I can't tell whether your card is safe. I don't have access to card security status or any evidence of compromise, and nothing in your transaction history shows fraud. The two TechMart charges look like a billing duplicate, not unauthorized use.\n\nIf you're worried about the card, the knowledge base says you can block it yourself at any time. A block is reversible for 30 days. After that, a replacement card has to be ordered. I can't place a card block with my tools. If you want one, you'd need to do it through the app or other card controls, or I can escalate to a human agent. Note that a lost or stolen card is replaced within five business days, and standing card payments will need the new card number.\n\nYour options:\n1. **Dispute TX-0401** (EUR 240.00, duplicate charge). I'll open it once you confirm. The deadline is 2026-09-18.\n2. **Block the card** through the app, or ask me to escalate so a human can help.\n3. **Both.**\n\nWhich would you like?",
+          "summarized": false,
+          "tools": [
+            "search_knowledge_base"
+          ],
+          "tool_calls": [
+            {
+              "name": "search_knowledge_base",
+              "arguments": {
+                "query": "card security block card compromised lost stolen freeze card"
+              },
+              "result": {
+                "index": "kb_clean",
+                "top_k": 4,
+                "query": "card security block card compromised lost stolen freeze card",
+                "fragments": [
+                  {
+                    "id": "security-policy.md#s2",
+                    "doc": "security-policy.md",
+                    "score": 0.9806,
+                    "text": "Customer security policy\n## Card blocking\nA customer may block a card immediately. Blocking is reversible for 30 days;\nafter that a replacement card must be ordered."
+                  },
+                  {
+                    "id": "cards.md#s4",
+                    "doc": "cards.md",
+                    "score": 0.7559,
+                    "text": "Cards\n## Replacement\nA lost or stolen card is replaced within five business days. The replacement\ncarries a new number; standing card payments must be updated by the customer."
+                  },
+                  {
+                    "id": "security-policy.md#s3",
+                    "doc": "security-policy.md",
+                    "score": 0.6124,
+                    "text": "Customer security policy\n## Suspicious activity\nA customer reporting suspicious activity is asked to block the affected card\nfirst; the disputed transactions are then reviewed."
+                  },
+                  {
+                    "id": "notifications.md#s4",
+                    "doc": "notifications.md",
+                    "score": 0.5883,
+                    "text": "Notifications\n## Security alerts\nLogin from a new device, a card block, and a change of the registered email\nalways generate a notification and cannot be disabled."
+                  }
+                ]
+              }
+            }
+          ],
+          "fragments": [
+            {
+              "id": "security-policy.md#s2",
+              "text": "Customer security policy\n## Card blocking\nA customer may block a card immediately. Blocking is reversible for 30 days;\nafter that a replacement card must be ordered."
+            },
+            {
+              "id": "cards.md#s4",
+              "text": "Cards\n## Replacement\nA lost or stolen card is replaced within five business days. The replacement\ncarries a new number; standing card payments must be updated by the customer."
+            },
+            {
+              "id": "security-policy.md#s3",
+              "text": "Customer security policy\n## Suspicious activity\nA customer reporting suspicious activity is asked to block the affected card\nfirst; the disputed transactions are then reviewed."
+            },
+            {
+              "id": "notifications.md#s4",
+              "text": "Notifications\n## Security alerts\nLogin from a new device, a card block, and a change of the registered email\nalways generate a notification and cannot be disabled."
+            }
+          ],
+          "usage": {
+            "input_tokens": 10059,
+            "output_tokens": 729,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000918,
+            "provider_cost_usd": 0.000918
+          }
+        },
+        {
+          "turn": 5,
+          "user": "Remind me, which transaction are we disputing and for how much?",
+          "answer": "We're disputing **TX-0401**: a EUR 240.00 card payment to TechMart Online on 2026-07-20. It's the duplicate of TX-0402 (EUR 240.00 to TechMart Online on 2026-07-14). The reason code is `duplicate_charge`.\n\nDo you want me to open this dispute now?",
+          "summarized": false,
+          "tools": [],
+          "tool_calls": [],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 5615,
+            "output_tokens": 111,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000391,
+            "provider_cost_usd": 0.000391
+          }
+        },
+        {
+          "turn": 6,
+          "user": "And what was the filing window again?",
+          "answer": "The filing window is 60 days from the transaction date. For TX-0401, dated 2026-07-20, the deadline is **2026-09-18**. Today is 2026-09-15, so you have three days left.",
+          "summarized": false,
+          "tools": [],
+          "tool_calls": [],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 5737,
+            "output_tokens": 67,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000381,
+            "provider_cost_usd": 0.000381
+          }
+        },
+        {
+          "turn": 7,
+          "user": "OK, please open the dispute.",
+          "answer": "The dispute is open.\n\n- **Dispute ID:** 1\n- **Transaction:** TX-0401, TechMart Online, 2026-07-20\n- **Amount:** EUR 240.00\n- **Reason:** duplicate_charge\n- **Status:** Open\n\nNext steps:\n1. Gather your order confirmations or receipts for both TechMart Online payments, plus your statement showing both charges.\n2. If the dispute team asks for evidence, you have 7 calendar days to provide it, or the case will be declined.\n\nIf you want the card blocked, or you'd like a human agent to look at anything else, tell me and I'll escalate.",
+          "summarized": false,
+          "tools": [
+            "create_dispute"
+          ],
+          "tool_calls": [
+            {
+              "name": "create_dispute",
+              "arguments": {
+                "transaction_id": "TX-0401",
+                "reason_code": "duplicate_charge",
+                "amount": 240,
+                "currency": "EUR"
+              },
+              "result": {
+                "dispute_id": 1,
+                "status": "open"
+              }
+            }
+          ],
+          "fragments": [],
+          "usage": {
+            "input_tokens": 11788,
+            "output_tokens": 413,
+            "model": "anthropic/claude-haiku-5.5",
+            "cost_usd": 0.000932,
+            "provider_cost_usd": 0.000933
+          }
+        }
+      ],
+      "budget_latency_metric": "trace_steps",
+      "budget_latency_ms_by_run": [
+        28428,
+        27390,
+        31039,
+        27188,
+        31473
+      ],
+      "runner_wall_ms_by_run": [
+        28491,
+        27477,
+        31124,
+        27261,
+        31575
+      ],
+      "traces_dir": "reports/traces/20261110T181629"
+    }
+  ]
+}
