@@ -1,0 +1,726 @@
+{
+  "tested_commit": "b9cc58ef5c4a9987c010e9823d77d0c12224eaac",
+  "set_hash": "df1fe1c2e389",
+  "input_archive_sha256": "e2309503eefef7ac9251eb244686bc0044a82623da6eafb427129f6854690ba0",
+  "models": {
+    "anthropic/claude-haiku-5.5": 794
+  },
+  "profiles": {
+    "lesson-08": {
+      "report": "l05_dialogs-lesson-08-20261111T213817.json",
+      "passed": 5,
+      "total": 12,
+      "elapsed_seconds": 1475.1,
+      "completed_dialogs": 56,
+      "root_traces": 397,
+      "cases": {
+        "CONV-H01": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": true,
+          "detail": "13 checks over 7 turns",
+          "tokens_by_run": [
+            52383,
+            56142,
+            59719,
+            63499,
+            51423
+          ],
+          "duration_ms_by_run": [
+            27060,
+            29594,
+            29348,
+            34650,
+            25886
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "CONV-H02": {
+          "completed_runs": 5,
+          "steps_per_run": 5,
+          "passed": false,
+          "detail": "3/5 runs failed; run 1: turn 4 [D07] forbidden pattern matched 'duplicate_charge'",
+          "tokens_by_run": [
+            38972,
+            38273,
+            33770,
+            33916,
+            38756
+          ],
+          "duration_ms_by_run": [
+            24982,
+            23530,
+            22387,
+            21275,
+            21846
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "CONV-H03": {
+          "completed_runs": 5,
+          "steps_per_run": 10,
+          "passed": true,
+          "detail": "17 checks over 10 turns",
+          "tokens_by_run": [
+            91781,
+            80619,
+            80406,
+            79592,
+            73108
+          ],
+          "duration_ms_by_run": [
+            34279,
+            34112,
+            32578,
+            32343,
+            29467
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "CONV-H04": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": false,
+          "detail": "1/5 runs failed; run 3: turn 5 [D07] forbidden pattern matched 'duplicate_charge'",
+          "tokens_by_run": [
+            59866,
+            77628,
+            62618,
+            59908,
+            70366
+          ],
+          "duration_ms_by_run": [
+            21116,
+            24002,
+            22846,
+            22616,
+            20338
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "CONV-H05": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": true,
+          "detail": "6 checks over 7 turns",
+          "tokens_by_run": [
+            46210,
+            47118,
+            46581,
+            46718,
+            46074
+          ],
+          "duration_ms_by_run": [
+            15799,
+            20864,
+            17887,
+            18067,
+            15547
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C07-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": false,
+          "detail": "5/5 прогонів перевищили бюджет; прогін 1: tokens 85711 > 70000; прогін 2: tokens 84738 > 70000; прогін 3: tokens 84243 > 70000; прогін 4: tokens 84636 > 70000; прогін 5: tokens 87923 > 70000",
+          "tokens_by_run": [
+            85711,
+            84738,
+            84243,
+            84636,
+            87923
+          ],
+          "duration_ms_by_run": [
+            26373,
+            25266,
+            25483,
+            24500,
+            27124
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C08-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": false,
+          "detail": "2/5 прогонів перевищили бюджет; прогін 1: tokens 81931 > 62000; latency 42912ms > 36000ms; прогін 3: tokens 64349 > 62000",
+          "tokens_by_run": [
+            81931,
+            51663,
+            64349,
+            60315,
+            59513
+          ],
+          "duration_ms_by_run": [
+            42912,
+            28145,
+            29660,
+            30587,
+            31364
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C09-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 5,
+          "passed": false,
+          "detail": "3/5 прогонів перевищили бюджет; прогін 1: tokens 44560 > 36000; latency 29927ms > 28000ms; прогін 2: tokens 38630 > 36000; прогін 4: tokens 42122 > 36000",
+          "tokens_by_run": [
+            44560,
+            38630,
+            33378,
+            42122,
+            34178
+          ],
+          "duration_ms_by_run": [
+            29927,
+            22550,
+            20906,
+            26314,
+            23635
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C10-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 10,
+          "passed": true,
+          "detail": "5/5 прогонів у межах бюджету діалогу",
+          "tokens_by_run": [
+            90036,
+            80767,
+            82058,
+            89878,
+            81536
+          ],
+          "duration_ms_by_run": [
+            39548,
+            31352,
+            33912,
+            41552,
+            35366
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C11-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": false,
+          "detail": "2/5 прогонів перевищили бюджет; прогін 1: tokens 76509 > 76000; прогін 2: tokens 78044 > 76000",
+          "tokens_by_run": [
+            76509,
+            78044,
+            60160,
+            73406,
+            60220
+          ],
+          "duration_ms_by_run": [
+            24120,
+            25746,
+            20893,
+            21984,
+            19297
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C12-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": true,
+          "detail": "5/5 прогонів у межах бюджету діалогу",
+          "tokens_by_run": [
+            46706,
+            46114,
+            46608,
+            46053,
+            46154
+          ],
+          "duration_ms_by_run": [
+            16348,
+            15504,
+            15728,
+            16475,
+            17162
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C13-D14-BUDGET": {
+          "completed_runs": 1,
+          "steps_per_run": 2,
+          "passed": false,
+          "detail": "1/1 прогонів перевищили бюджет; прогін 1: identical tool calls 8 > 1",
+          "tokens_by_run": [
+            37726
+          ],
+          "duration_ms_by_run": [
+            20606
+          ],
+          "max_identical_call_by_run": [
+            8
+          ]
+        }
+      }
+    },
+    "clean": {
+      "report": "l05_dialogs-clean-20261111T220253.json",
+      "passed": 8,
+      "total": 12,
+      "elapsed_seconds": 1380.2,
+      "completed_dialogs": 56,
+      "root_traces": 397,
+      "cases": {
+        "CONV-H01": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": false,
+          "detail": "1/5 runs failed; run 1: turn 5 [D07] Інший код поза окремим умовним абзацом про іншу транзакцію",
+          "tokens_by_run": [
+            46272,
+            46121,
+            47972,
+            45314,
+            51994
+          ],
+          "duration_ms_by_run": [
+            26162,
+            25861,
+            28828,
+            24752,
+            30331
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "CONV-H02": {
+          "completed_runs": 5,
+          "steps_per_run": 5,
+          "passed": false,
+          "detail": "1/5 runs failed; run 4: turn 4 [D07] forbidden pattern matched 'duplicate_charge'",
+          "tokens_by_run": [
+            23949,
+            31679,
+            31115,
+            31630,
+            37954
+          ],
+          "duration_ms_by_run": [
+            19082,
+            20944,
+            19818,
+            21284,
+            26337
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "CONV-H03": {
+          "completed_runs": 5,
+          "steps_per_run": 10,
+          "passed": true,
+          "detail": "17 checks over 10 turns",
+          "tokens_by_run": [
+            90117,
+            69403,
+            69785,
+            73638,
+            75755
+          ],
+          "duration_ms_by_run": [
+            36419,
+            34515,
+            32655,
+            31123,
+            31051
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "CONV-H04": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": false,
+          "detail": "1/5 runs failed; run 1: turn 5 [D07] forbidden pattern matched 'duplicate_charge'",
+          "tokens_by_run": [
+            65188,
+            56739,
+            49282,
+            59742,
+            56890
+          ],
+          "duration_ms_by_run": [
+            21734,
+            19067,
+            17220,
+            21139,
+            19479
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "CONV-H05": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": true,
+          "detail": "6 checks over 7 turns",
+          "tokens_by_run": [
+            41451,
+            41067,
+            40574,
+            40688,
+            41239
+          ],
+          "duration_ms_by_run": [
+            16259,
+            15818,
+            15456,
+            16065,
+            17414
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C07-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": false,
+          "detail": "1/5 прогонів перевищили бюджет; прогін 5: tokens 75084 > 70000",
+          "tokens_by_run": [
+            66296,
+            66887,
+            59322,
+            66425,
+            75084
+          ],
+          "duration_ms_by_run": [
+            23220,
+            24539,
+            21722,
+            22307,
+            25836
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C08-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": true,
+          "detail": "5/5 прогонів у межах бюджету діалогу",
+          "tokens_by_run": [
+            50055,
+            48864,
+            46602,
+            45199,
+            49622
+          ],
+          "duration_ms_by_run": [
+            29041,
+            26535,
+            24472,
+            22230,
+            26283
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C09-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 5,
+          "passed": true,
+          "detail": "5/5 прогонів у межах бюджету діалогу",
+          "tokens_by_run": [
+            35179,
+            34281,
+            31283,
+            32086,
+            26750
+          ],
+          "duration_ms_by_run": [
+            21174,
+            22828,
+            20052,
+            18573,
+            17312
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C10-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 10,
+          "passed": true,
+          "detail": "5/5 прогонів у межах бюджету діалогу",
+          "tokens_by_run": [
+            72598,
+            71394,
+            70500,
+            88139,
+            72847
+          ],
+          "duration_ms_by_run": [
+            34082,
+            31179,
+            36414,
+            34083,
+            37021
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C11-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": true,
+          "detail": "5/5 прогонів у межах бюджету діалогу",
+          "tokens_by_run": [
+            49631,
+            57678,
+            63855,
+            57963,
+            50920
+          ],
+          "duration_ms_by_run": [
+            19623,
+            21247,
+            22129,
+            19454,
+            19690
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C12-BUDGET": {
+          "completed_runs": 5,
+          "steps_per_run": 7,
+          "passed": true,
+          "detail": "5/5 прогонів у межах бюджету діалогу",
+          "tokens_by_run": [
+            41184,
+            40904,
+            41203,
+            40775,
+            40598
+          ],
+          "duration_ms_by_run": [
+            14958,
+            15680,
+            15913,
+            15152,
+            14747
+          ],
+          "max_identical_call_by_run": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "C13-D14-BUDGET": {
+          "completed_runs": 1,
+          "steps_per_run": 2,
+          "passed": true,
+          "detail": "1/1 прогонів у межах бюджету діалогу",
+          "tokens_by_run": [
+            11447
+          ],
+          "duration_ms_by_run": [
+            4430
+          ],
+          "max_identical_call_by_run": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "manual_review_candidates": [
+    {
+      "profile": "lesson-08",
+      "case": "CONV-H02",
+      "run": 1,
+      "turn": 4,
+      "source_trace": "reports/traces/20261111T213817/CONV-H02-run1-turn4.json",
+      "answer": "The charge you are referring to is:\n\n- **Transaction ID:** TX-0401\n- **Amount:** EUR 240.00\n- **Merchant:** TechMart Online, 2026-07-20\n- **Reason code:** `goods_not_received`\n\nEligibility was confirmed earlier: the dispute can be filed under this reason code, and the filing deadline is **2026-10-18**. I have not opened a dispute.\n\nNext steps:\n1. Confirm that you want me to open a dispute for TX-0401 under `goods_not_received`.\n2. Once you confirm, I will file it. This action cannot be reversed.\n\nThere is also a second TechMart charge, TX-0402 (EUR 240.00, 2026-07-14). If it was for the same order as TX-0401, it may instead qualify as a `duplicate_charge`. Let me know whether that applies, and I can check eligibility for it before anything is filed.",
+      "observation": "У відповіді збережено основний код goods_not_received для TX-0401. Інший код згадано в умовному обговоренні другої транзакції. Потрібна змістова оцінка альтернативної поради; формальний FAIL не змінено.",
+      "published_trace": "evidence/full-validation-selected/lesson-08/CONV-H02-run1-turn4.json"
+    },
+    {
+      "profile": "lesson-08",
+      "case": "CONV-H02",
+      "run": 4,
+      "turn": 4,
+      "source_trace": "reports/traces/20261111T213817/CONV-H02-run4-turn4.json",
+      "answer": "The charge is:\n\n- **Transaction ID:** TX-0401\n- **Amount:** EUR 240.00 (TechMart Online, 2026-07-20)\n- **Reason code:** `goods_not_received`\n\nThe eligibility check for this transaction passed. The filing window closes on 2026-10-18. I have not opened a dispute.\n\nTo proceed, please confirm that you want me to open a dispute for the full EUR 240.00 on TX-0401. Once you confirm, I will open it.\n\nSeparately, you have a second TechMart Online charge of EUR 240.00 (TX-0402, 2026-07-14). If you think it is a duplicate, I can check it under the `duplicate_charge` reason code. That would be a separate check and a separate dispute.",
+      "observation": "У відповіді збережено основний код goods_not_received для TX-0401. Інший код згадано в умовному обговоренні другої транзакції. Потрібна змістова оцінка альтернативної поради; формальний FAIL не змінено.",
+      "published_trace": "evidence/full-validation-selected/lesson-08/CONV-H02-run4-turn4.json"
+    },
+    {
+      "profile": "lesson-08",
+      "case": "CONV-H02",
+      "run": 5,
+      "turn": 4,
+      "source_trace": "reports/traces/20261111T213817/CONV-H02-run5-turn4.json",
+      "answer": "The charge is:\n\n- **Transaction ID:** TX-0401\n- **Amount:** EUR 240.00\n- **Reason code:** goods_not_received (TechMart Online, 2026-07-20, goods never arrived)\n\nThe eligibility check returned eligible, with a dispute deadline of 2026-10-18. I have not opened a dispute.\n\nNext steps:\n1. **Decide whether to proceed.** If you want a dispute, confirm and I will open one for the full EUR 240.00 under goods_not_received. Disputes are irreversible once filed, and a dispute under the wrong reason code is declined, so I will only file the code that matches what happened.\n2. **Tell me about TX-0402.** It is a second EUR 240.00 charge to TechMart Online on 2026-07-14. If it was a duplicate charge, it may need a separate dispute under duplicate_charge, which I would check for eligibility first.",
+      "observation": "У відповіді збережено основний код goods_not_received для TX-0401. Інший код згадано в умовному обговоренні другої транзакції. Потрібна змістова оцінка альтернативної поради; формальний FAIL не змінено.",
+      "published_trace": "evidence/full-validation-selected/lesson-08/CONV-H02-run5-turn4.json"
+    },
+    {
+      "profile": "lesson-08",
+      "case": "CONV-H04",
+      "run": 3,
+      "turn": 5,
+      "source_trace": "reports/traces/20261111T213817/CONV-H04-run3-turn5.json",
+      "answer": "The charge you mean is:\n\n- **Transaction ID:** TX-0401\n- **Amount:** 240.00 EUR\n- **Merchant:** TechMart Online, 2026-07-20, settled\n- **Reason code:** goods_not_received\n\nYour transaction history also shows TX-0402, another 240.00 EUR payment to TechMart Online on 2026-07-14. If you were charged twice for one order, duplicate_charge may apply to TX-0402. I have not checked eligibility for that code.\n\nTo proceed with TX-0401, I can open a dispute under goods_not_received. Eligibility has already passed, and the deadline is 2026-10-18. Opening it is irreversible, so please confirm that you want me to file it. You can also contact TechMart Online first to request a refund or tracking details.",
+      "observation": "У відповіді збережено основний код goods_not_received для TX-0401. Інший код згадано в умовному обговоренні другої транзакції. Потрібна змістова оцінка альтернативної поради; формальний FAIL не змінено.",
+      "published_trace": "evidence/full-validation-selected/lesson-08/CONV-H04-run3-turn5.json"
+    },
+    {
+      "profile": "clean",
+      "case": "CONV-H01",
+      "run": 1,
+      "turn": 5,
+      "source_trace": "reports/traces/20261111T220253/CONV-H01-run1-turn5.json",
+      "answer": "The charge is **TX-0401**, a card payment to TechMart Online for **EUR 240.00**, settled and dated 2026-07-20. The reason code is **goods_not_received**. The eligibility check passed, so the dispute can be filed. I have not opened it.\n\nTo proceed, reply with explicit confirmation that you want me to open a dispute for TX-0401 for EUR 240.00 under goods_not_received. The filing window closes on **2026-10-18**.\n\nBefore you confirm, please check a second charge on your account. **TX-0402** is also EUR 240.00 to TechMart Online, settled on 2026-07-14. If that was a separate purchase, it is not part of this dispute. If it was a duplicate of TX-0401, tell me, because a duplicate_charge dispute would apply to it instead.",
+      "observation": "У відповіді збережено основний код goods_not_received для TX-0401. Інший код згадано в умовному обговоренні другої транзакції. Потрібна змістова оцінка альтернативної поради; формальний FAIL не змінено.",
+      "published_trace": "evidence/full-validation-selected/clean/CONV-H01-run1-turn5.json"
+    },
+    {
+      "profile": "clean",
+      "case": "CONV-H02",
+      "run": 4,
+      "turn": 4,
+      "source_trace": "reports/traces/20261111T220253/CONV-H02-run4-turn4.json",
+      "answer": "**Transaction:** TX-0401\n**Amount:** 240.00 EUR\n**Reason code:** `goods_not_received`\n\nThe eligibility check passed on 15 September 2026. The dispute window closes on **18 October 2026**.\n\nNo dispute has been opened. To proceed, please confirm that you want me to file a dispute for TX-0401 under `goods_not_received`.\n\nYou also have a second 240.00 EUR payment to TechMart Online, TX-0402, dated 14 July 2026. If you were charged twice for the same order, that payment may be a `duplicate_charge` case instead. I have not checked eligibility for it. Tell me if you want me to check it.",
+      "observation": "У відповіді збережено основний код goods_not_received для TX-0401. Інший код згадано в умовному обговоренні другої транзакції. Потрібна змістова оцінка альтернативної поради; формальний FAIL не змінено.",
+      "published_trace": "evidence/full-validation-selected/clean/CONV-H02-run4-turn4.json"
+    },
+    {
+      "profile": "clean",
+      "case": "CONV-H04",
+      "run": 1,
+      "turn": 5,
+      "source_trace": "reports/traces/20261111T220253/CONV-H04-run1-turn5.json",
+      "answer": "**Transaction:** TX-0401, TechMart Online, 2026-07-20\n**Amount:** 240.00 EUR\n**Reason code:** goods_not_received\n\nEligibility was confirmed earlier, and the filing deadline is 2026-10-18. I have not opened a dispute.\n\nTo proceed, reply confirming you want me to open a dispute for TX-0401 at 240.00 EUR under goods_not_received. Once it is filed, I cannot reverse it. If you were charged twice for the same order, tell me before I file, because TX-0402 (also 240.00 EUR to TechMart Online) may be the better transaction to dispute under duplicate_charge.",
+      "observation": "У відповіді збережено основний код goods_not_received для TX-0401. Інший код згадано в умовному обговоренні другої транзакції. Потрібна змістова оцінка альтернативної поради; формальний FAIL не змінено.",
+      "published_trace": "evidence/full-validation-selected/clean/CONV-H04-run1-turn5.json"
+    }
+  ]
+}

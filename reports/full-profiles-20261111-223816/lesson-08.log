@@ -1,0 +1,422 @@
+ Container l08-dz7-eval-run-26be26fc89ef Creating 
+ Container l08-dz7-eval-run-26be26fc89ef Created 
+set l05_dialogs (12 cases)  profile lesson-08  prompt base.v1
+------------------------------------------------------------------------
+PASS  CONV-H01   L4 memory      dialog  26.0s, 283166 tokens over 5 runs, last run shown
+      turn 1    U: I'm CUS-0004. Transaction TX-0401, 240.00 EUR: the goods never arrived. Which
+                reason code applies? State the transaction ID and amount too. Do not open a dispute.
+                A: The reason code that applies is goods_not_received. - Transaction: TX-0401 -
+                Amount: 240.00 EUR - Merchant: TechMart Online - Date: 2026-07-20 - Status: settle …
+      turn 2    U: Can I dispute it? Use the official eligibility tool for that transaction and
+                reason. State the transaction date, filing window in days, deadline, reason code a …
+                A: Yes, TX-0401 is eligible for a dispute under the goods_not_received reason code.
+                The dispute has not been opened. - Transaction date: 2026-07-20 - Filing window: 9 …
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily outgoing transfer limit is EUR 5,000, as of 2026-09-15. You have used
+                EUR 0 of it today, so the full EUR 5,000 remains available. For reference, your …
+                ~ agent.summarize ran on this turn
+      turn 4    U: According to the tariff, what is the standard FX spread percentage for my tier?
+                Give the percentage.
+                A: The FX spread for Tier 1 is 1.5%, according to the Verta tariff schedule. The
+                spread applies only after the free monthly conversion allowance of EUR 500 is used …
+      turn 5    U: Fine. Back to that charge — what do I do next? First state its exact transaction
+                ID, amount and reason code. Do not open a dispute.
+                A: The charge is: - Transaction ID: TX-0401 - Amount: EUR 240.00 - Merchant:
+                TechMart Online (card, settled, dated 2026-07-20) - Reason code: goods_not_receive …
+      turn 6    U: 240 euro, as I said at the start.
+                A: Yes, the amount is EUR 240.00. I stated it correctly in my last message. No
+                dispute has been opened. To file the dispute for TX-0401 (TechMart Online, …
+      turn 7    U: And I still have time to file, right? State the original transaction's reason
+                code, transaction date, filing window in days and filing deadline. Do not open a …
+                A: Yes, you still have time. The filing window is open as of 2026-09-15. - Reason
+                code: goods_not_received - Transaction date: 2026-07-20 - Filing window: 90 days …
+      checks    T3      ok   precondition: agent.summarize is in the trace
+                T5      ok   dispute_amount_eur still holds [D06]
+                T5      ok   transaction_id still holds [D06]
+                T5      ok   reason_code still holds [D07]
+                T7      ok   transaction_date still holds [D06]
+                T7      ok   filing_window_days still holds [D07]
+                T1      ok   oracle: initial non-delivery reason code matches corpus
+                T1      ok   oracle: initial amount matches customer input
+                T2      ok   oracle: verify original transaction and reason with the engine
+                T2      ok   oracle: engine confirms the initial 90-day window
+                T7      ok   oracle: final deadline matches engine and accepts Unicode hyphens
+                T7      ok   original reason code must accompany the final filing answer
+                T7      ok   no substituted code in the final filing answer
+                T5      ok   Код первинного спору прив’язаний до TX-0401; інший код дозволено лише в
+                окремій умовній пораді про інший ID [D07]
+      runs      5/5 runs passed; first failing turn per run: -, -, -, -, -
+
+FAIL  CONV-H02   L4 memory      dialog  21.9s, 183687 tokens over 5 runs, last run shown
+      turn 1    U: I'm CUS-0004. Transaction TX-0401, 240.00 EUR: the goods never arrived. Which
+                reason code applies? State the transaction ID and amount too. Do not open a dispute.
+                A: Reason code: `goods_not_received` - Transaction: TX-0401 - Amount: 240.00 EUR -
+                Merchant: TechMart Online - Date: 2026-07-20 - Status: settled This code matches …
+      turn 2    U: Can I dispute it? Use the official eligibility tool for that transaction and
+                reason. State the transaction date, filing window in days, deadline, reason code a …
+                A: Yes, TX-0401 is eligible for a dispute under `goods_not_received`. I have not
+                opened a dispute. - Transaction ID: TX-0401 - Merchant: TechMart Online - …
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily transfer limit is EUR 5,000, as of 2026-09-15 (tier1). - Daily spent:
+                EUR 0.00 - Daily remaining: EUR 5,000.00 For reference, your monthly limit is EUR …
+                ~ agent.summarize ran on this turn
+      turn 4    U: Fine. Back to that charge — what do I do next? First state its exact transaction
+                ID, amount and reason code. Do not open a dispute.
+                A: The charge is: - Transaction ID: TX-0401 - Amount: EUR 240.00 - Reason code:
+                goods_not_received (TechMart Online, 2026-07-20, goods never arrived) The …
+      turn 5    U: And I still have time to file, right? State the original transaction's reason
+                code, transaction date, filing window in days and filing deadline. Do not open a …
+                A: Yes, you still have time. The eligibility check on 2026-09-15 returned eligible.
+                - Reason code: goods_not_received - Transaction date: 2026-07-20 - Filing window:  …
+      checks    T3      ok   precondition: agent.summarize is in the trace
+                T4      ok   dispute_amount_eur still holds [D06]
+                T4      ok   transaction_id still holds [D06]
+                T4      ok   reason_code still holds [D07]
+                T4      FAIL reason_code: no substitute [D07] -> forbidden pattern matched
+                'duplicate_charge'
+                T5      ok   transaction_date still holds [D06]
+                T5      ok   filing_window_days still holds [D07]
+                T1      ok   oracle: initial non-delivery reason code matches corpus
+                T1      ok   oracle: initial amount matches customer input
+                T2      ok   oracle: verify original transaction and reason with the engine
+                T2      ok   oracle: engine confirms the initial 90-day window
+                T5      ok   oracle: final deadline matches engine and accepts Unicode hyphens
+                T5      ok   original reason code must accompany the final filing answer
+                T5      ok   no substituted code in the final filing answer
+      runs      2/5 runs passed; first failing turn per run: 4, -, -, 4, 4; median 4, range 4-4
+
+PASS  CONV-H03   L4 memory      dialog  29.6s, 405506 tokens over 5 runs, last run shown
+      turn 1    U: I'm CUS-0004. Transaction TX-0401, 240.00 EUR: the goods never arrived. Which
+                reason code applies? State the transaction ID and amount too. Do not open a dispute.
+                A: The reason code that matches your situation is `goods_not_received`. -
+                Transaction ID: TX-0401 - Amount: 240.00 EUR - Account: ACC-1005 (the only account …
+      turn 2    U: Can I dispute it? Use the official eligibility tool for that transaction and
+                reason. State the transaction date, filing window in days, deadline, reason code a …
+                A: Yes, TX-0401 is eligible for a dispute under the `goods_not_received` reason
+                code. The eligibility check returned: - Transaction ID: TX-0401 - Amount: 240.00 E …
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily outgoing transfer limit is EUR 5,000, and you have the full amount
+                available today (EUR 0 spent so far). For reference, your monthly limit is EUR …
+                ~ agent.summarize ran on this turn
+      turn 4    U: According to the tariff, what is the standard FX spread percentage for my tier?
+                Give the percentage.
+                A: The FX spread for Tier 1 is 1.5% over the mid-market rate. It applies only after
+                the free monthly conversion allowance of EUR 500 is used up. Until then, conversio …
+      turn 5    U: Fine. Back to that charge — what do I do next? First state its exact transaction
+                ID, amount and reason code. Do not open a dispute.
+                A: The charge is: - Transaction ID: TX-0401 - Amount: EUR 240.00 - Reason code:
+                `goods_not_received` I have not opened a dispute. The eligibility check for this …
+      turn 6    U: 240 euro, as I said at the start.
+                A: Yes, the amount is EUR 240.00, which matches TX-0401. I have not opened a dispute
+                yet. Your reply confirms the amount but not that you want me to file, and filing i …
+      turn 7    U: A separate general question: what is a SEPA transfer?
+                A: A SEPA transfer is a payment to a bank in the euro area. According to Verta's
+                documentation, it reaches the beneficiary's bank within one business day. Verta's …
+      turn 8    U: Which currency is used for SEPA transfers?
+                A: The retrieved Verta documentation doesn't explicitly state which currency SEPA
+                transfers use. It describes SEPA transfers as reaching euro-area banks within one …
+      turn 9    U: Back to the original dispute. Confirm its exact transaction ID, amount and reason
+                code. Do not open it.
+                A: - Transaction ID: TX-0401 - Amount: EUR 240.00 - Reason code:
+                `goods_not_received` The dispute has not been opened. It will only be filed if you …
+      turn 10   U: And I still have time to file, right? State the original transaction's reason
+                code, transaction date, filing window in days and filing deadline. Do not open a …
+                A: Yes, you still have time to file. - Reason code: `goods_not_received` -
+                Transaction date: 2026-07-20 - Filing window: 90 days - Filing deadline: 2026-10-1 …
+      checks    T3      ok   precondition: agent.summarize is in the trace
+                T5      ok   dispute_amount_eur still holds [D06]
+                T9      ok   dispute_amount_eur still holds [D06]
+                T5      ok   transaction_id still holds [D06]
+                T9      ok   transaction_id still holds [D06]
+                T5      ok   reason_code still holds [D07]
+                T9      ok   reason_code still holds [D07]
+                T9      ok   reason_code: no substitute [D07]
+                T10     ok   transaction_date still holds [D06]
+                T10     ok   filing_window_days still holds [D07]
+                T1      ok   oracle: initial non-delivery reason code matches corpus
+                T1      ok   oracle: initial amount matches customer input
+                T2      ok   oracle: verify original transaction and reason with the engine
+                T2      ok   oracle: engine confirms the initial 90-day window
+                T10     ok   oracle: final deadline matches engine and accepts Unicode hyphens
+                T10     ok   original reason code must accompany the final filing answer
+                T10     ok   no substituted code in the final filing answer
+                T5      ok   Код первинного спору прив’язаний до TX-0401; інший код дозволено лише в
+                окремій умовній пораді про інший ID [D07]
+      runs      5/5 runs passed; first failing turn per run: -, -, -, -, -
+
+FAIL  CONV-H04   L4 memory      dialog  20.4s, 330386 tokens over 5 runs, last run shown
+      turn 1    U: I'm CUS-0004. Transaction TX-0401, 240.00 EUR: the goods never arrived. Which
+                reason code applies? State the transaction ID and amount too. Do not open a dispute.
+                A: The reason code that applies is goods_not_received. - Transaction: TX-0401 -
+                Amount: 240.00 EUR - Merchant: TechMart Online (card, settled, dated 2026-07-20) I …
+      turn 2    U: Can I dispute it? Use the official eligibility tool for that transaction and
+                reason. State the transaction date, filing window in days, deadline, reason code a …
+                A: Yes, TX-0401 is eligible for a dispute under the goods_not_received reason code.
+                I have not opened one. - Transaction: TX-0401, TechMart Online - Transaction date: …
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily outgoing transfer limit is 5,000 EUR (tier1). As of today, 2026-09-15,
+                you have spent 0 EUR of it, so 5,000 EUR remains. For reference, your monthly limi …
+      turn 4    U: According to the tariff, what is the standard FX spread percentage for my tier?
+                Give the percentage.
+                A: The standard FX spread for tier1 is 1.5%, according to the Verta tariff schedule.
+                The spread applies only after the monthly free conversion allowance of EUR 500 is …
+      turn 5    U: Fine. Back to that charge — what do I do next? First state its exact transaction
+                ID, amount and reason code. Do not open a dispute.
+                A: The charge is TX-0401, 240.00 EUR, reason code goods_not_received. The dispute is
+                eligible and must be filed by 2026-10-18. To proceed, reply with explicit …
+      turn 6    U: 240 euro, as I said at the start.
+                A: You're right, the amount is 240.00 EUR, as you said. That matches the transaction
+                record for TX-0401. I have not opened a dispute. Reply with explicit confirmation …
+      turn 7    U: And I still have time to file, right? State the original transaction's reason
+                code, transaction date, filing window in days and filing deadline. Do not open a …
+                A: Yes, you still have time. The deadline is 2026-10-18, as of today (2026-09-15). -
+                Transaction: TX-0401, 240.00 EUR, TechMart Online - Reason code: goods_not_receive …
+      checks    T3      ok   precondition: control: agent.summarize did NOT run
+                T5      ok   dispute_amount_eur still holds [D06]
+                T5      ok   transaction_id still holds [D06]
+                T5      ok   reason_code still holds [D07]
+                T5      FAIL reason_code: no substitute [D07] -> forbidden pattern matched
+                'duplicate_charge'
+                T7      ok   transaction_date still holds [D06]
+                T7      ok   filing_window_days still holds [D07]
+                T1      ok   oracle: initial non-delivery reason code matches corpus
+                T1      ok   oracle: initial amount matches customer input
+                T2      ok   oracle: verify original transaction and reason with the engine
+                T2      ok   oracle: engine confirms the initial 90-day window
+                T7      ok   oracle: final deadline matches engine and accepts Unicode hyphens
+                T7      ok   original reason code must accompany the final filing answer
+                T7      ok   no substituted code in the final filing answer
+                T4      ok   precondition: control: no summarization on this turn
+                T5      ok   precondition: control: no summarization on this turn
+                T6      ok   precondition: control: no summarization on this turn
+                T7      ok   precondition: control: no summarization on this turn
+      runs      4/5 runs passed; first failing turn per run: -, -, 5, -, -; median 5, range 5-5
+
+PASS  CONV-H05   L4 memory      dialog  15.6s, 232701 tokens over 5 runs, last run shown
+      turn 1    U: Search Verta documentation: for a purchase where the goods never arrived, which
+                exact dispute reason code applies? Reply with that code only. Do not open a dispute.
+                A: goods_not_received
+      turn 2    U: Keep that classification for our conversation. Repeat the exact reason code once
+                more.
+                A: goods_not_received
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily outgoing transfer limit is EUR 5,000 (tier1). As of 2026-09-15, you
+                have used EUR 0 today, so the full EUR 5,000 remains available. For reference, you …
+                ~ agent.summarize ran on this turn
+      turn 4    U: According to the tariff, what is the standard FX spread percentage for my tier?
+                Give the percentage.
+                A: The standard FX spread for Tier 1 is 1.5%, according to the Verta tariff
+                schedule. It applies to the mid-market rate only after the free monthly conversion …
+      turn 5    U: Back to the earlier purchase. Which exact reason code did you identify? Reply
+                with the identifier only. Do not open any dispute.
+                A: goods_not_received
+      turn 6    U: I am still asking about that same non-delivery issue.
+                A: The reason code for a non-delivery issue is goods_not_received. I have not opened
+                a dispute. If you want to pursue this, send me the transaction ID and I will check …
+      turn 7    U: Repeat the exact reason code you identified at the beginning. Reply with that
+                identifier only.
+                A: goods_not_received
+      checks    T3      ok   precondition: agent.summarize is in the trace
+                T5      ok   reason_code still holds [D07]
+                T7      ok   reason_code still holds [D07]
+                T5      ok   reason_code: no substitute [D07]
+                T7      ok   reason_code: no substitute [D07]
+                T1      ok   oracle: initial non-delivery reason code matches corpus
+                T1      ok   oracle: consult the corpus for the initial classification
+      runs      5/5 runs passed; first failing turn per run: -, -, -, -, -
+
+FAIL  C07-BUDGET L2 memory      budget  27.2s, 427251 tokens over 5 runs, last run shown
+      turn 1    U: Hi, I see two charges of 240 EUR from TechMart Online on my account. Can you
+                check my recent transactions?
+                A: I found both charges on your EUR account (ACC-1005, balance 1,310.20 EUR): |
+                Transaction | Date | Merchant | Amount | Status | |---|---|---|---|---| | TX-0402  …
+      turn 2    U: Yes, the one on July 20 looks like a duplicate of the one on July 14. What
+                dispute reason fits and how long do I have to file?
+                A: The charge on July 20 (TX-0401, 240.00 EUR) is eligible for a duplicate charge
+                dispute. I have not opened it yet. - Reason code: `duplicate_charge`, which fits …
+      turn 3    U: What documents do I need for that?
+                A: The knowledge base does not list a fixed set of required documents for duplicate
+                charge disputes. It says the bank may ask for supporting evidence, such as: - An …
+      turn 4    U: Is my card still safe to use meanwhile?
+                A: I can't confirm whether your card is safe. I have no tool that checks card
+                security, and nothing in your transaction history shows unauthorized use. The two …
+      turn 5    U: Remind me, which transaction are we disputing and for how much?
+                A: We are disputing TX-0401, the TechMart Online card payment of 240.00 EUR on 20
+                July 2026. It duplicates TX-0402, the same amount to the same merchant on 14 July …
+      turn 6    U: And what was the filing window again?
+                A: The filing window for a duplicate charge is 60 days from the transaction date.
+                For TX-0401 (20 July 2026), the deadline is 18 September 2026. The eligibility che …
+      turn 7    U: OK, please open the dispute.
+                A: The dispute is open. - Dispute ID: 1 - Transaction: TX-0401, TechMart Online, 20
+                July 2026 - Amount: 240.00 EUR - Reason: Duplicate charge - Status: Open Please …
+      verdict   5/5 прогонів перевищили бюджет; прогін 1: tokens 85711 > 70000; прогін 2: tokens
+                84738 > 70000; прогін 3: tokens 84243 > 70000; прогін 4: tokens 84636 > 70000;
+                прогін 5: tokens 87923 > 70000
+
+FAIL  C08-BUDGET L2 memory      budget  31.5s, 317771 tokens over 5 runs, last run shown
+      turn 1    U: I'm CUS-0004. Transaction TX-0401, 240.00 EUR: the goods never arrived. Which
+                reason code applies? State the transaction ID and amount too. Do not open a dispute.
+                A: The reason code that applies is goods_not_received. - Transaction: TX-0401,
+                TechMart Online, EUR 240.00, settled, dated 2026-07-20 - Window: 90 days from the …
+      turn 2    U: Can I dispute it? Use the official eligibility tool for that transaction and
+                reason. State the transaction date, filing window in days, deadline, reason code a …
+                A: Yes, TX-0401 is eligible for a dispute under the goods_not_received reason code.
+                I have not opened a dispute. - Transaction ID: TX-0401 - Merchant: TechMart Online …
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily outgoing transfer limit is EUR 5,000, based on your tier1 account. As
+                of 2026-09-15: - Daily limit: EUR 5,000.00 - Spent today: EUR 0.00 - Remaining …
+                ~ agent.summarize ran on this turn
+      turn 4    U: According to the tariff, what is the standard FX spread percentage for my tier?
+                Give the percentage.
+                A: The standard FX spread for Tier 1 is 1.5%, according to the Verta tariff
+                schedule. The spread applies to the mid-market rate only after the free monthly …
+      turn 5    U: Fine. Back to that charge — what do I do next? First state its exact transaction
+                ID, amount and reason code. Do not open a dispute.
+                A: The charge you want to dispute is: - Transaction ID: TX-0401 - Merchant: TechMart
+                Online - Amount: EUR 240.00 - Reason code: goods_not_received A dispute has not be …
+      turn 6    U: 240 euro, as I said at the start.
+                A: Both TechMart Online charges are for EUR 240.00, so the amount alone doesn't
+                identify which one you mean. I have not opened a dispute. - TX-0401: TechMart …
+      turn 7    U: And I still have time to file, right? State the original transaction's reason
+                code, transaction date, filing window in days and filing deadline. Do not open a …
+                A: Yes, you still have time. For the original transaction, TX-0401: - Reason code:
+                goods_not_received - Transaction date: 2026-07-20 - Filing window: 90 days from th …
+      verdict   2/5 прогонів перевищили бюджет; прогін 1: tokens 81931 > 62000; latency 42912ms >
+                36000ms; прогін 3: tokens 64349 > 62000
+
+FAIL  C09-BUDGET L2 memory      budget  23.7s, 192868 tokens over 5 runs, last run shown
+      turn 1    U: I'm CUS-0004. Transaction TX-0401, 240.00 EUR: the goods never arrived. Which
+                reason code applies? State the transaction ID and amount too. Do not open a dispute.
+                A: The reason code that matches your claim is goods_not_received. Transaction
+                details: - Transaction ID: TX-0401 - Amount: EUR 240.00 - Merchant: TechMart Onlin …
+      turn 2    U: Can I dispute it? Use the official eligibility tool for that transaction and
+                reason. State the transaction date, filing window in days, deadline, reason code a …
+                A: Yes, TX-0401 is eligible for a dispute under goods_not_received. I have not
+                opened one. - Transaction: TX-0401, TechMart Online - Transaction date: 2026-07-20 …
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily outgoing transfer limit is EUR 5,000, based on your tier1 limits on
+                file as of 2026-09-15. Today you have not spent anything against it, so the full E …
+                ~ agent.summarize ran on this turn
+      turn 4    U: Fine. Back to that charge — what do I do next? First state its exact transaction
+                ID, amount and reason code. Do not open a dispute.
+                A: The charge is TX-0401, a card payment to TechMart Online for EUR 240.00, dated
+                2026-07-20. The reason code is goods_not_received. I have not opened a dispute. Th …
+      turn 5    U: And I still have time to file, right? State the original transaction's reason
+                code, transaction date, filing window in days and filing deadline. Do not open a …
+                A: Yes, you still have time. Based on the eligibility check, which used an as-of
+                date of 2026-09-15: - Transaction: TX-0401, TechMart Online, EUR 240.00 - Reason …
+      verdict   3/5 прогонів перевищили бюджет; прогін 1: tokens 44560 > 36000; latency 29927ms >
+                28000ms; прогін 2: tokens 38630 > 36000; прогін 4: tokens 42122 > 36000
+
+PASS  C10-BUDGET L2 memory      budget  35.5s, 424275 tokens over 5 runs, last run shown
+      turn 1    U: I'm CUS-0004. Transaction TX-0401, 240.00 EUR: the goods never arrived. Which
+                reason code applies? State the transaction ID and amount too. Do not open a dispute.
+                A: The reason code that applies is `goods_not_received`. - Transaction ID: TX-0401 -
+                Amount: 240.00 EUR I haven't checked TX-0401 against your account records or run a …
+      turn 2    U: Can I dispute it? Use the official eligibility tool for that transaction and
+                reason. State the transaction date, filing window in days, deadline, reason code a …
+                A: Yes, TX-0401 is eligible for a dispute under the `goods_not_received` reason
+                code. The eligibility check passed all four criteria: reason code, transaction …
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily outgoing transfer limit is EUR 5,000 (tier 1). As of 2026-09-15, you
+                have spent EUR 0 today, so the full EUR 5,000 remains available. For reference, yo …
+                ~ agent.summarize ran on this turn
+      turn 4    U: According to the tariff, what is the standard FX spread percentage for my tier?
+                Give the percentage.
+                A: The FX spread for your tier (Tier 1) is 1.5%, according to the Verta tariff
+                schedule. This spread applies over the mid-market rate only after the free monthly …
+      turn 5    U: Fine. Back to that charge — what do I do next? First state its exact transaction
+                ID, amount and reason code. Do not open a dispute.
+                A: The charge you are disputing is: - Transaction ID: TX-0401 - Amount: EUR 240.00 -
+                Merchant: TechMart Online - Date: 2026-07-20 - Reason code: `goods_not_received` …
+      turn 6    U: 240 euro, as I said at the start.
+                A: Yes, the amount is EUR 240.00, which matches transaction TX-0401 (TechMart
+                Online, 2026-07-20). I have not opened a dispute. TX-0402 is also EUR 240.00 to …
+      turn 7    U: A separate general question: what is a SEPA transfer?
+                A: A SEPA transfer is a transfer to a bank in the euro area. According to the Verta
+                documentation, SEPA transfers reach euro-area banks within one business day. Under …
+      turn 8    U: Which currency is used for SEPA transfers?
+                A: The documentation does not explicitly state which currency SEPA transfers use. It
+                says SEPA transfers reach euro-area banks within one business day, and the SEPA fl …
+      turn 9    U: Back to the original dispute. Confirm its exact transaction ID, amount and reason
+                code. Do not open it.
+                A: - Transaction ID: TX-0401 - Amount: EUR 240.00 (verified against your transaction
+                history) - Reason code: `goods_not_received` I have not opened the dispute.
+      turn 10   U: And I still have time to file, right? State the original transaction's reason
+                code, transaction date, filing window in days and filing deadline. Do not open a …
+                A: Yes, you still have time to file. Based on the eligibility check I ran earlier
+                (as of 2026-09-15): - Reason code: `goods_not_received` - Transaction date: …
+      verdict   5/5 прогонів у межах бюджету діалогу
+
+FAIL  C11-BUDGET L2 memory      budget  19.4s, 348339 tokens over 5 runs, last run shown
+      turn 1    U: I'm CUS-0004. Transaction TX-0401, 240.00 EUR: the goods never arrived. Which
+                reason code applies? State the transaction ID and amount too. Do not open a dispute.
+                A: The reason code that matches your claim is goods_not_received. - Transaction ID:
+                TX-0401 - Amount: EUR 240.00 - Merchant: TechMart Online (card payment, settled, …
+      turn 2    U: Can I dispute it? Use the official eligibility tool for that transaction and
+                reason. State the transaction date, filing window in days, deadline, reason code a …
+                A: Yes, TX-0401 is eligible for a dispute under goods_not_received. I have not
+                opened one. - Transaction: TX-0401, TechMart Online - Transaction date: 2026-07-20 …
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily outgoing transfer limit is EUR 5,000 (tier1). As of 2026-09-15, you
+                have spent EUR 0 today, so EUR 5,000 remains available. For reference, your monthl …
+      turn 4    U: According to the tariff, what is the standard FX spread percentage for my tier?
+                Give the percentage.
+                A: The FX spread for tier1 is 1.5%, per the Verta tariff schedule. It applies to the
+                mid-market rate only after the free monthly conversion allowance (EUR 500 for tier …
+      turn 5    U: Fine. Back to that charge — what do I do next? First state its exact transaction
+                ID, amount and reason code. Do not open a dispute.
+                A: Transaction: TX-0401 Amount: EUR 240.00 Reason code: goods_not_received
+                Eligibility passed, so you can file this dispute now. Its deadline is 2026-10-18.  …
+      turn 6    U: 240 euro, as I said at the start.
+                A: You're right, the amount is EUR 240.00. I haven't opened a dispute. To proceed
+                with TX-0401 (EUR 240.00, goods_not_received), reply with an explicit go-ahead and …
+      turn 7    U: And I still have time to file, right? State the original transaction's reason
+                code, transaction date, filing window in days and filing deadline. Do not open a …
+                A: Yes, you still have time. The eligibility check I ran returned these details for
+                TX-0401: - Reason code: goods_not_received - Transaction date: 2026-07-20 - Filing …
+      verdict   2/5 прогонів перевищили бюджет; прогін 1: tokens 76509 > 76000; прогін 2: tokens
+                78044 > 76000
+
+PASS  C12-BUDGET L2 memory      budget  17.3s, 231635 tokens over 5 runs, last run shown
+      turn 1    U: Search Verta documentation: for a purchase where the goods never arrived, which
+                exact dispute reason code applies? Reply with that code only. Do not open a dispute.
+                A: goods_not_received
+      turn 2    U: Keep that classification for our conversation. Repeat the exact reason code once
+                more.
+                A: goods_not_received
+      turn 3    U: What is my daily outgoing transfer limit in EUR?
+                A: Your daily outgoing transfer limit is EUR 5,000 (Tier 1). As of 2026-09-15, you
+                have not spent anything today, so the full EUR 5,000 is available. For reference, …
+                ~ agent.summarize ran on this turn
+      turn 4    U: According to the tariff, what is the standard FX spread percentage for my tier?
+                Give the percentage.
+                A: The FX spread for Tier 1 is 1.5%, according to the Verta tariff schedule. The
+                spread applies to the mid-market rate only after the free monthly conversion …
+      turn 5    U: Back to the earlier purchase. Which exact reason code did you identify? Reply
+                with the identifier only. Do not open any dispute.
+                A: goods_not_received
+      turn 6    U: I am still asking about that same non-delivery issue.
+                A: The reason code for a purchase where the goods never arrived is
+                goods_not_received. I have not opened a dispute. If you want to proceed, I can che …
+      turn 7    U: Repeat the exact reason code you identified at the beginning. Reply with that
+                identifier only.
+                A: goods_not_received
+      verdict   5/5 прогонів у межах бюджету діалогу
+
+FAIL  C13-D14-BUDGET L1 orchestration budget  20.6s, 37726 tokens
+      turn 1    U: Hi, which accounts do I have?
+                A: Hello Clara. You have one account with Verta: - Account ID: ACC-1004 - Currency:
+                EUR - Balance: EUR 145,000.00 - Tier: tier3 Is there anything you'd like to do wit …
+      turn 2    U: Can you show my recent transactions?
+                A: I couldn't find any transactions on your account (ACC-1004). The transaction
+                history returned an empty list on every attempt. I also retried the lookup several …
+      verdict   1/1 прогонів перевищили бюджет; прогін 1: identical tool calls 8 > 1
+
+------------------------------------------------------------------------
+5/12 passed   elapsed 1475.1s
+  memory       5/11
+  orchestration 0/1
+failed: CONV-H02, CONV-H04, C07-BUDGET, C08-BUDGET, C09-BUDGET, C11-BUDGET, C13-D14-BUDGET
+report -> evals/reports/l05_dialogs-lesson-08-20261111T213817.json
+
