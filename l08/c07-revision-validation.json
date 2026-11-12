@@ -1,0 +1,55 @@
+{
+  "kind": "independent_live_validation",
+  "tested_commit": "436b1ad271ae5f62b482cbfed45ceaf9afe6f5e7",
+  "set_hash": "97e70ace4035",
+  "model": "anthropic/claude-haiku-5.5",
+  "limits": {
+    "tokens_total": 80000,
+    "latency_ms": 28000
+  },
+  "source_archive_sha256": "7657411ede3e68025115118320dc5bfc2fdf7f4718ed915df3eca86854cb1fc1",
+  "profiles": {
+    "clean": {
+      "report": "reports/l05_dialogs-clean-20261112T153113.json",
+      "tokens_by_run": [
+        58279,
+        67840,
+        66967,
+        59947,
+        58226
+      ],
+      "duration_ms_by_run": [
+        23940,
+        23634,
+        25011,
+        24945,
+        21105
+      ],
+      "within_budget": 5,
+      "completed_runs": 5,
+      "root_traces": 35,
+      "case_passed": true
+    },
+    "lesson-08": {
+      "report": "reports/l05_dialogs-lesson-08-20261112T153324.json",
+      "tokens_by_run": [
+        71607,
+        82688,
+        85828,
+        81247,
+        84183
+      ],
+      "duration_ms_by_run": [
+        25016,
+        22935,
+        26439,
+        36657,
+        26504
+      ],
+      "within_budget": 1,
+      "completed_runs": 5,
+      "root_traces": 35,
+      "case_passed": false
+    }
+  }
+}

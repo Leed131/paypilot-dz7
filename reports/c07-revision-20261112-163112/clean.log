@@ -1,0 +1,34 @@
+ Container l08-dz7-review-eval-run-7d0bfd6258d4 Creating 
+ Container l08-dz7-review-eval-run-7d0bfd6258d4 Created 
+set l05_dialogs (1 cases)  profile clean  prompt base.v1
+------------------------------------------------------------------------
+PASS  C07-BUDGET L2 memory      budget  21.2s, 311259 tokens over 5 runs, last run shown
+      turn 1    U: Hi, I see two charges of 240 EUR from TechMart Online on my account. Can you
+                check my recent transactions?
+                A: I found both charges on your EUR account (ACC-1005): | Transaction | Date |
+                Merchant | Amount | Status | |---|---|---|---|---| | TX-0402 | 2026-07-14 | TechMa …
+      turn 2    U: Yes, the one on July 20 looks like a duplicate of the one on July 14. What
+                dispute reason fits and how long do I have to file?
+                A: The duplicate-charge dispute for TX-0401 (240.00 EUR, TechMart Online,
+                2026-07-20) is eligible. - Reason code: `duplicate_charge` - Filing window: 60 day …
+      turn 3    U: What documents do I need for that?
+                A: The knowledge base doesn't list any document requirements for duplicate-charge
+                disputes. It only says a dispute needs the transaction reference and a reason code …
+      turn 4    U: Is my card still safe to use meanwhile?
+                A: I can't confirm whether your card is safe. Nothing in your account data or the
+                knowledge base says it is compromised. The TechMart charges are a possible duplica …
+      turn 5    U: Remind me, which transaction are we disputing and for how much?
+                A: We would be disputing TX-0401: a 240.00 EUR card payment to TechMart Online on
+                2026-07-20, under reason code `duplicate_charge`. The dispute has not been opened …
+      turn 6    U: And what was the filing window again?
+                A: The filing window for this dispute is 60 days from the transaction date. For
+                TX-0401 (2026-07-20), the deadline is 2026-09-18, which is three days from today …
+      turn 7    U: OK, please open the dispute.
+                A: I've opened the dispute. - Dispute ID: 1 - Transaction: TX-0401, 240.00 EUR,
+                TechMart Online, 2026-07-20 - Reason code: `duplicate_charge` - Status: Open Dispu …
+      verdict   5/5 прогонів у межах бюджету діалогу
+
+------------------------------------------------------------------------
+1/1 passed   elapsed 130.4s
+  memory       1/1
+report -> evals/reports/l05_dialogs-clean-20261112T153113.json
