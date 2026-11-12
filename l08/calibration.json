@@ -1,52 +1,206 @@
 {
-  "series": {
-    "clean-calibration": [
-      58333,
-      58985,
-      60386,
-      68132,
-      60302
+  "C07-BUDGET": {
+    "status": "Калібрування та офлайн-переоцінка; нового живого прогону з новими порогами ще немає",
+    "date": "2026-11-12",
+    "model": "anthropic/claude-haiku-5.5",
+    "source_report": "reports/l05_dialogs-clean-20261111T220253.json",
+    "source_case": "C07-BUDGET",
+    "source_set_hash": "df1fe1c2e389",
+    "baseline_tokens_total": [
+      66296,
+      66887,
+      59322,
+      66425,
+      75084
     ],
-    "lesson-08": [
-      85071,
-      73868,
-      70302,
-      73240,
-      72618
+    "baseline_latency_ms": [
+      23220,
+      24539,
+      21722,
+      22307,
+      25836
     ],
-    "clean-validation": [
-      59569,
-      67190,
-      65634,
-      67497,
-      64919
-    ]
-  },
-  "medians": {
-    "clean-calibration": 60302,
-    "lesson-08": 73240,
-    "clean-validation": 65634
-  },
-  "thresholds": [
-    60000,
-    100000,
-    70000
-  ],
-  "sources": [
-    {
-      "series": "clean-calibration",
-      "archive": "C07-BUDGET-clean-release-5.zip",
-      "sha256": "8842decb3d903f2dbf52c3e4ddf83e63f3551a2d7e7ace39b563b9631d27ebe4"
-    },
-    {
-      "series": "lesson-08",
-      "archive": "C07-BUDGET-lesson08-release-5.zip",
-      "sha256": "618b509c1307811fac59517eb3e911c48f95a7ed1151bff71b82ff452cacec29"
-    },
-    {
-      "series": "clean-validation",
-      "archive": "C07-BUDGET-clean-validation-70k.zip",
-      "sha256": "9692e9c08fa3fb2a1250eb01d9c269cc0a339c9e5f4d71ccad22a0a7e3004fb9"
+    "median_tokens_total": 66425,
+    "median_latency_ms": 23220,
+    "tokens_margin_pct": 20,
+    "latency_margin_pct": 20,
+    "rounding": "Медіана × (1 + запас/100), округлення вгору до 1000 відповідних одиниць",
+    "token_rule": "Від медіани clean, не від максимуму",
+    "latency_measure": "Сума agent.request.duration_ms усіх кроків одного діалогу",
+    "margin_reason": "Єдиний запас 20%; для токенів C10 25%, оскільки спостережений clean-розкид від медіани досяг 21.41%. Запас обрано на калібрувальних даних, це не незалежна валідація.",
+    "budget": {
+      "tokens_total": 80000,
+      "latency_ms": 28000
     }
-  ]
+  },
+  "C08-BUDGET": {
+    "status": "Калібрування та офлайн-переоцінка; нового живого прогону з новими порогами ще немає",
+    "date": "2026-11-12",
+    "model": "anthropic/claude-haiku-5.5",
+    "source_report": "reports/l05_dialogs-clean-20261111T220253.json",
+    "source_case": "C08-BUDGET",
+    "source_set_hash": "df1fe1c2e389",
+    "baseline_tokens_total": [
+      50055,
+      48864,
+      46602,
+      45199,
+      49622
+    ],
+    "baseline_latency_ms": [
+      29041,
+      26535,
+      24472,
+      22230,
+      26283
+    ],
+    "median_tokens_total": 48864,
+    "median_latency_ms": 26283,
+    "tokens_margin_pct": 20,
+    "latency_margin_pct": 20,
+    "rounding": "Медіана × (1 + запас/100), округлення вгору до 1000 відповідних одиниць",
+    "token_rule": "Від медіани clean, не від максимуму",
+    "latency_measure": "Сума agent.request.duration_ms усіх кроків одного діалогу",
+    "margin_reason": "Єдиний запас 20%; для токенів C10 25%, оскільки спостережений clean-розкид від медіани досяг 21.41%. Запас обрано на калібрувальних даних, це не незалежна валідація.",
+    "budget": {
+      "tokens_total": 59000,
+      "latency_ms": 32000
+    }
+  },
+  "C09-BUDGET": {
+    "status": "Калібрування та офлайн-переоцінка; нового живого прогону з новими порогами ще немає",
+    "date": "2026-11-12",
+    "model": "anthropic/claude-haiku-5.5",
+    "source_report": "reports/l05_dialogs-clean-20261111T220253.json",
+    "source_case": "C09-BUDGET",
+    "source_set_hash": "df1fe1c2e389",
+    "baseline_tokens_total": [
+      35179,
+      34281,
+      31283,
+      32086,
+      26750
+    ],
+    "baseline_latency_ms": [
+      21174,
+      22828,
+      20052,
+      18573,
+      17312
+    ],
+    "median_tokens_total": 32086,
+    "median_latency_ms": 20052,
+    "tokens_margin_pct": 20,
+    "latency_margin_pct": 20,
+    "rounding": "Медіана × (1 + запас/100), округлення вгору до 1000 відповідних одиниць",
+    "token_rule": "Від медіани clean, не від максимуму",
+    "latency_measure": "Сума agent.request.duration_ms усіх кроків одного діалогу",
+    "margin_reason": "Єдиний запас 20%; для токенів C10 25%, оскільки спостережений clean-розкид від медіани досяг 21.41%. Запас обрано на калібрувальних даних, це не незалежна валідація.",
+    "budget": {
+      "tokens_total": 39000,
+      "latency_ms": 25000
+    }
+  },
+  "C10-BUDGET": {
+    "status": "Калібрування та офлайн-переоцінка; нового живого прогону з новими порогами ще немає",
+    "date": "2026-11-12",
+    "model": "anthropic/claude-haiku-5.5",
+    "source_report": "reports/l05_dialogs-clean-20261111T220253.json",
+    "source_case": "C10-BUDGET",
+    "source_set_hash": "df1fe1c2e389",
+    "baseline_tokens_total": [
+      72598,
+      71394,
+      70500,
+      88139,
+      72847
+    ],
+    "baseline_latency_ms": [
+      34082,
+      31179,
+      36414,
+      34083,
+      37021
+    ],
+    "median_tokens_total": 72598,
+    "median_latency_ms": 34083,
+    "tokens_margin_pct": 25,
+    "latency_margin_pct": 20,
+    "rounding": "Медіана × (1 + запас/100), округлення вгору до 1000 відповідних одиниць",
+    "token_rule": "Від медіани clean, не від максимуму",
+    "latency_measure": "Сума agent.request.duration_ms усіх кроків одного діалогу",
+    "margin_reason": "Єдиний запас 20%; для токенів C10 25%, оскільки спостережений clean-розкид від медіани досяг 21.41%. Запас обрано на калібрувальних даних, це не незалежна валідація.",
+    "budget": {
+      "tokens_total": 91000,
+      "latency_ms": 41000
+    }
+  },
+  "C11-BUDGET": {
+    "status": "Калібрування та офлайн-переоцінка; нового живого прогону з новими порогами ще немає",
+    "date": "2026-11-12",
+    "model": "anthropic/claude-haiku-5.5",
+    "source_report": "reports/l05_dialogs-clean-20261111T220253.json",
+    "source_case": "C11-BUDGET",
+    "source_set_hash": "df1fe1c2e389",
+    "baseline_tokens_total": [
+      49631,
+      57678,
+      63855,
+      57963,
+      50920
+    ],
+    "baseline_latency_ms": [
+      19623,
+      21247,
+      22129,
+      19454,
+      19690
+    ],
+    "median_tokens_total": 57678,
+    "median_latency_ms": 19690,
+    "tokens_margin_pct": 20,
+    "latency_margin_pct": 20,
+    "rounding": "Медіана × (1 + запас/100), округлення вгору до 1000 відповідних одиниць",
+    "token_rule": "Від медіани clean, не від максимуму",
+    "latency_measure": "Сума agent.request.duration_ms усіх кроків одного діалогу",
+    "margin_reason": "Єдиний запас 20%; для токенів C10 25%, оскільки спостережений clean-розкид від медіани досяг 21.41%. Запас обрано на калібрувальних даних, це не незалежна валідація.",
+    "budget": {
+      "tokens_total": 70000,
+      "latency_ms": 24000
+    }
+  },
+  "C12-BUDGET": {
+    "status": "Калібрування та офлайн-переоцінка; нового живого прогону з новими порогами ще немає",
+    "date": "2026-11-12",
+    "model": "anthropic/claude-haiku-5.5",
+    "source_report": "reports/l05_dialogs-clean-20261111T220253.json",
+    "source_case": "C12-BUDGET",
+    "source_set_hash": "df1fe1c2e389",
+    "baseline_tokens_total": [
+      41184,
+      40904,
+      41203,
+      40775,
+      40598
+    ],
+    "baseline_latency_ms": [
+      14958,
+      15680,
+      15913,
+      15152,
+      14747
+    ],
+    "median_tokens_total": 40904,
+    "median_latency_ms": 15152,
+    "tokens_margin_pct": 20,
+    "latency_margin_pct": 20,
+    "rounding": "Медіана × (1 + запас/100), округлення вгору до 1000 відповідних одиниць",
+    "token_rule": "Від медіани clean, не від максимуму",
+    "latency_measure": "Сума agent.request.duration_ms усіх кроків одного діалогу",
+    "margin_reason": "Єдиний запас 20%; для токенів C10 25%, оскільки спостережений clean-розкид від медіани досяг 21.41%. Запас обрано на калібрувальних даних, це не незалежна валідація.",
+    "budget": {
+      "tokens_total": 50000,
+      "latency_ms": 19000
+    }
+  }
 }

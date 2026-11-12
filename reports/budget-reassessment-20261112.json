@@ -1,0 +1,335 @@
+{
+  "kind": "offline_reassessment_not_new_model_run",
+  "source_set_hash": "df1fe1c2e389",
+  "sources": {
+    "lesson-08": "reports/l05_dialogs-lesson-08-20261111T213817.json",
+    "clean": "reports/l05_dialogs-clean-20261111T220253.json"
+  },
+  "cases": {
+    "C07-BUDGET": {
+      "clean": {
+        "within_budget": 5,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      },
+      "lesson-08": {
+        "within_budget": 0,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 85711 > 80000"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 84738 > 80000"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 84243 > 80000"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 84636 > 80000"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 87923 > 80000"
+          }
+        ]
+      }
+    },
+    "C08-BUDGET": {
+      "clean": {
+        "within_budget": 5,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      },
+      "lesson-08": {
+        "within_budget": 1,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 81931 > 59000; latency 42912ms > 32000ms"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 64349 > 59000"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 60315 > 59000"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 59513 > 59000"
+          }
+        ]
+      }
+    },
+    "C09-BUDGET": {
+      "clean": {
+        "within_budget": 5,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      },
+      "lesson-08": {
+        "within_budget": 3,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 44560 > 39000; latency 29927ms > 25000ms"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 42122 > 39000; latency 26314ms > 25000ms"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      }
+    },
+    "C10-BUDGET": {
+      "clean": {
+        "within_budget": 5,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      },
+      "lesson-08": {
+        "within_budget": 4,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: latency 41552ms > 41000ms"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      }
+    },
+    "C11-BUDGET": {
+      "clean": {
+        "within_budget": 5,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      },
+      "lesson-08": {
+        "within_budget": 2,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 76509 > 70000; latency 24120ms > 24000ms"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 78044 > 70000; latency 25746ms > 24000ms"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": false,
+            "detail": "1/1 прогонів перевищили бюджет; прогін 1: tokens 73406 > 70000"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      }
+    },
+    "C12-BUDGET": {
+      "clean": {
+        "within_budget": 5,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      },
+      "lesson-08": {
+        "within_budget": 5,
+        "runs": 5,
+        "verdicts": [
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          },
+          {
+            "passed": true,
+            "detail": "1/1 прогонів у межах бюджету діалогу"
+          }
+        ]
+      }
+    }
+  },
+  "new_set_hash": "97e70ace4035"
+}
